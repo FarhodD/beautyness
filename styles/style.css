@@ -1,0 +1,58 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-font: 'Manrope', sans-serif;
+  --secondary-font: 'Playfair Display', serif; 
+}
+
+img {
+  max-width: 100%;
+  /* object-fit: contain; */
+  /* vertical-align: top;  */
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+}
+
+
+body {
+  font-family: var(--main-font);
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1220px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+section {
+  min-height: 100vh;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+

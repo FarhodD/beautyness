@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+  <!-- STYLES -->
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/animation.css">
+  <link rel="stylesheet" href="./styles/adaptive.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header__top-container">
+      <a href="#" class="logo__link">
+        <img src="./images/logo.svg" alt="">
+      </a>
+      <a href="tel:" class="phone__block">
+        <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M14.05 5.5C15.0267 5.69057 15.9244 6.16826 16.6281 6.87194C17.3317 7.57561 17.8094 8.47326 18 9.45L14.05 5.5ZM14.05 1.5C16.0793 1.72544 17.9716 2.63417 19.4162 4.07701C20.8609 5.51984 21.772 7.41101 22 9.44L14.05 1.5ZM21 17.42V20.42C21.0011 20.6985 20.9441 20.9742 20.8325 21.2293C20.7209 21.4845 20.5573 21.7136 20.3521 21.9019C20.1469 22.0901 19.9046 22.2335 19.6407 22.3227C19.3769 22.4119 19.0974 22.4451 18.82 22.42C15.7428 22.0856 12.787 21.0341 10.19 19.35C7.77382 17.8147 5.72533 15.7662 4.18999 13.35C2.49997 10.7412 1.44824 7.77099 1.11999 4.68C1.095 4.40347 1.12787 4.12476 1.21649 3.86162C1.30512 3.59849 1.44757 3.35669 1.63476 3.15162C1.82196 2.94655 2.0498 2.78271 2.30379 2.67052C2.55777 2.55833 2.83233 2.50026 3.10999 2.5H6.11C6.5953 2.49522 7.06579 2.66708 7.43376 2.98353C7.80173 3.29999 8.04207 3.73945 8.10999 4.22C8.23662 5.18007 8.47145 6.12273 8.81 7.03C8.94454 7.38792 8.97366 7.77691 8.8939 8.15088C8.81415 8.52485 8.62886 8.86811 8.35999 9.14L7.09 10.41C8.51355 12.9135 10.5864 14.9864 13.09 16.41L14.36 15.14C14.6319 14.8711 14.9751 14.6858 15.3491 14.6061C15.7231 14.5263 16.1121 14.5555 16.47 14.69C17.3773 15.0286 18.3199 15.2634 19.28 15.39C19.7658 15.4585 20.2094 15.7032 20.5265 16.0775C20.8437 16.4518 21.0122 16.9296 21 17.42Z"
+            stroke="#7A9CA5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <span class="phone__block-text">Call Us - (+22) 123 456 7890</span>
+      </a>
+      <nav class="menu__links">
+        <a href="#" class="menu__link">Home</a>
+        <a href="#" class="menu__link">About</a>
+        <a href="#" class="menu__link">Pages</a>
+      </nav>
+
+      <div class="contacts">
+        <a href="#" class="contacts__text">Contact Us</a>
+        <svg class="facebook" width="10" height="19" viewBox="0 0 10 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M9.18359 10.375L9.67578 7.14062H6.54688V5.03125C6.54688 4.11719 6.96875 3.27344 8.375 3.27344H9.81641V0.496094C9.81641 0.496094 8.51562 0.25 7.28516 0.25C4.71875 0.25 3.03125 1.83203 3.03125 4.64453V7.14062H0.148438V10.375H3.03125V18.25H6.54688V10.375H9.18359Z"
+            fill="#141414" />
+        </svg>
+        <svg class="twitter" width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M16.1367 4.59375C16.8398 4.06641 17.4727 3.43359 17.9648 2.69531C17.332 2.97656 16.5938 3.1875 15.8555 3.25781C16.6289 2.80078 17.1914 2.09766 17.4727 1.21875C16.7695 1.64062 15.9609 1.95703 15.1523 2.13281C14.4492 1.39453 13.5 0.972656 12.4453 0.972656C10.4062 0.972656 8.75391 2.625 8.75391 4.66406C8.75391 4.94531 8.78906 5.22656 8.85938 5.50781C5.80078 5.33203 3.05859 3.85547 1.23047 1.64062C0.914062 2.16797 0.738281 2.80078 0.738281 3.50391C0.738281 4.76953 1.37109 5.89453 2.39062 6.5625C1.79297 6.52734 1.19531 6.38672 0.703125 6.10547V6.14062C0.703125 7.93359 1.96875 9.41016 3.65625 9.76172C3.375 9.83203 3.02344 9.90234 2.70703 9.90234C2.46094 9.90234 2.25 9.86719 2.00391 9.83203C2.46094 11.3086 3.83203 12.3633 5.44922 12.3984C4.18359 13.3828 2.60156 13.9805 0.878906 13.9805C0.5625 13.9805 0.28125 13.9453 0 13.9102C1.61719 14.9648 3.55078 15.5625 5.66016 15.5625C12.4453 15.5625 16.1367 9.97266 16.1367 5.08594C16.1367 4.91016 16.1367 4.76953 16.1367 4.59375Z"
+            fill="#141414" />
+        </svg>
+        <svg class="linkedIn" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M3.64062 16V5.48828H0.371094V16H3.64062ZM1.98828 4.08203C3.04297 4.08203 3.88672 3.20312 3.88672 2.14844C3.88672 1.12891 3.04297 0.285156 1.98828 0.285156C0.96875 0.285156 0.125 1.12891 0.125 2.14844C0.125 3.20312 0.96875 4.08203 1.98828 4.08203ZM15.8398 16H15.875V10.2344C15.875 7.42188 15.2422 5.24219 11.9375 5.24219C10.3555 5.24219 9.30078 6.12109 8.84375 6.92969H8.80859V5.48828H5.67969V16H8.94922V10.7969C8.94922 9.42578 9.19531 8.125 10.8828 8.125C12.5703 8.125 12.6055 9.67188 12.6055 10.9023V16H15.8398Z"
+            fill="#141414" />
+        </svg>
+      </div>
+
+      <div class="header__top--btn">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M14.25 3H3.75C2.92157 3 2.25 3.67157 2.25 4.5V15C2.25 15.8284 2.92157 16.5 3.75 16.5H14.25C15.0784 16.5 15.75 15.8284 15.75 15V4.5C15.75 3.67157 15.0784 3 14.25 3Z"
+            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M12 1.5V4.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M6 1.5V4.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M2.25 7.5H15.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+
+        <span class="btn__text">Reservation</span>
+      </div>
+    </div>
+    <!-- header__top-container -->
+
+    <div class="header__main">
+      <div class="container">
+        <div class="header__main--inner">
+          <div class="header__main--left-side">
+            <div class="logo__info">
+              <img class="logo-info--img" src="./images/logo-info.png" alt="">
+              <span class="logo-info--text">Welcome to Beautyness!!!</span>
+            </div>
+            <h1>Bring The well being & beauty naturally!!!</h1>
+            <p class="header__text">Your body does a lot for you, and your caring therapist can help you return the
+              favor in a way that benefits both your physical and mental wellness.
+            </p>
+            <button class="header__btn">Make a reservation</button>
+          </div>
+
+          <div class="header__main--right-side">
+            <div class="rect"></div>
+            <img class="bg-image" src="./images/bg.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- MAIN -->
+  <main class="main">
+    <section class="cards__section container">
+      <div class="cards">
+        <div class="card">
+          <img class="card__img" src="./images/card-img1.jpg" alt="">
+          <h2 class="card__title">Spa & Massage</h2>
+          <p class="card__text">Your wellness goals and the areas of preference, then unwind with a customized massage
+            experience.
+          </p>
+          <button class="card__btn">Read more</button>
+        </div>
+        <div class="card">
+          <img class="card__img" src="./images/card-img2.jpg" alt="">
+          <h2 class="card__title">Hair & Beauty</h2>
+          <p class="card__text">Combining skin-type-specific cleansing & toning, exfoliation, deep-pore cleansing
+            extractions customized treatment.
+          </p>
+          <button class="card__btn">Read more</button>
+        </div>
+        <div class="card">
+          <img class="card__img" src="./images/card-img3.jpg" alt="">
+          <h2 class="card__title">Body Treatments</h2>
+          <p class="card__text">Offers therapeutic benefits such as relief of muscle tension and increased circulation
+            to the areas worked.
+          </p>
+          <button class="card__btn">Read more</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="care">
+      <div class="container">
+        <div class="care__inner">
+          <div class="care__left-side">
+            <p class="care__left-name">Take Your Care</p>
+            <h2 class="care__title">Elevate Your Lifestyle by Bring Balance and Well Being Into Your Life</h2>
+            <p class="care__text">Designed to allow you to unwind and feel confident that you’re in good, caring hands.
+              Our first priority is cleanliness. We have a full-time staff whose job is to ensure that the environment
+              at Beautyness remains.
+            </p>
+            <div class="care__cards">
+              <div class="care__card">
+                <img class="care__card-img" src="./images/beauty-experts.png" alt="">
+                <p class="care__card-name">Beauty</p>
+                <p class="care__card-name">Experts</p>
+              </div>
+              <div class="care__card">
+                <img class="care__card-img" src="./images/quality.png" alt="">
+                <p class="care__card-name">Quality</p>
+                <p class="care__card-name">Services</p>
+              </div>
+              <div class="care__card">
+                <img class="care__card-img" src="./images/nature.png" alt="">
+                <p class="care__card-name">100%</p>
+                <p class="care__card-name">Nature</p>
+              </div>
+            </div>
+          </div>
+          <div class="care__right-side"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./scripts/app.js"></script>
+</body>
+
+</html>
