@@ -49,6 +49,9 @@
 }
 
 
+.submenu {
+  display: none;
+}
 
 .contacts {
   display: flex;
@@ -212,6 +215,7 @@ h1 {
 .care {
   padding-top: 105px;
   padding-bottom: 120px;
+  background-color: #EBF3F5;
 }
 
 .care__inner {
@@ -289,7 +293,7 @@ h1 {
 
 /* SERVICES */
 .our__services {
-  padding: 110px;
+  padding: 110px 0px;
 }
 
 .our__services-inner {}
@@ -319,6 +323,7 @@ h1 {
   display: flex;
   gap: 0 60px;
   align-items: center;
+  justify-content: space-between;
 }
 
 .service__info-img {}
@@ -670,16 +675,20 @@ span:first-child {
 }
 
 .dicount__inp {
+  font-family: inherit;
   outline: none;
   border: none;
-  height: 65px;
+  font-size: 20px;
+  padding: 18px 10px;
   border: 2px solid #5C8692;
 }
 
 textarea {
+  padding: 7px;
+  font-family: inherit;
   outline: none;
   border: none;
-  height: 130px;
+  font-size: 20px;
   border: 2px solid #5C8692;
 }
 
@@ -795,6 +804,7 @@ textarea {
 .contacts__footer-footer-top {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-bottom: 45px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   margin-bottom: 60px;
@@ -819,6 +829,8 @@ textarea {
 .contacts__footer-navs {
   display: flex;
   justify-content: space-between;
+  gap: 40px 30px;
+  flex-wrap: wrap;
 }
 
 .explore {}
@@ -868,7 +880,7 @@ textarea {
 }
 
 .keep-in-touch {
-  font-weight: 400; 
+  font-weight: 400;
   font-size: 17px;
   line-height: 26px;
   letter-spacing: 0.17px;
