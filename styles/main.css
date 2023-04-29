@@ -595,34 +595,6 @@ span:first-child {
 
 .discount__left {
 }
-.prof {
-  position: relative;
-  top: 75px;
-}
-
-.message {
-  position: relative;
-  top: 75px;
-  left: 5px;
-}
-
-.tel__ico {
-  position: relative;
-  top: 75px;
-  left: 5px;
-}
-
-.book__ico {
-  position: relative;
-  top: 75px;
-  left: 5px;
-}
-
-.comments__ico {
-  position: relative;
-  top: 75px;
-  left: 5px;
-}
 
 .discount__left-text {
   font-weight: 400;
@@ -737,17 +709,31 @@ span:first-child {
   outline: none;
   border: none;
   font-size: 20px;
-  padding: 18px 45px;
+  padding: 18px 25px 18px 55px;
   border: 2px solid #5C8692;
 }
+.inp__container{
+  position: relative;
 
+}
+
+.inp__container>svg{
+  position: absolute;
+  top: 10px;
+  left: 5px;
+}
+.inp__container>input{
+  width: 100%;
+}
 textarea {
-  padding: 7px;
+  width: 100%;
+  padding: 18px 20px 18px 55px;
   font-family: inherit;
   outline: none;
   border: none;
   font-size: 20px;
   border: 2px solid #5c8692;
+  resize: none;
 }
 
 .discount__right-btn {
