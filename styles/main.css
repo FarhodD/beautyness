@@ -569,7 +569,35 @@ span:first-child {
   gap: 0 104px;
 }
 
-.discount__left {}
+
+.prof {
+  position: relative;
+  top: 75px;
+}
+
+.message {
+  position: relative;
+  top: 75px;
+  left: 5px;
+}
+
+.tel__ico {
+  position: relative;
+  top: 75px;
+  left: 5px;
+}
+
+.book__ico {
+  position: relative;
+  top: 75px;
+  left: 5px;
+}
+
+.comments__ico {
+  position: relative;
+  top: 75px;
+  left: 5px;
+}
 
 .discount__left-text {
   font-weight: 400;
@@ -688,7 +716,7 @@ span:first-child {
   outline: none;
   border: none;
   font-size: 20px;
-  padding: 18px 10px;
+  padding: 18px 45px;
   border: 2px solid #5C8692;
 }
 
