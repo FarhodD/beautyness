@@ -167,7 +167,10 @@
   }
 
   /* CARE */
-
+  /* .care__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  } */
 
   /* SERVICES */
   .service__info {

@@ -69,11 +69,20 @@
   color: #5C8692;
 }
 
-.facebook {}
+.facebook path:hover {
+  transition: .5s;
+  fill: #385898;
+}
 
-.twitter {}
+.twitter path:hover {
+  transition: .5s;
+  fill: #1d9bf0;
+}
 
-.linkedIn {}
+.linkedIn path:hover {
+  transition: .5s;
+  fill: #0a66c2;
+}
 
 .header__top--btn {
   background-color: #5C8692;
@@ -728,7 +737,8 @@ textarea {
 }
 
 .our__blog-cards {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   margin-bottom: 12px;
 }
@@ -945,3 +955,103 @@ span.contacts__item-name {
 }
 
 .footer__copyright-value {}
+
+/* modalWindow */
+.modal-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.modal {
+  position: relative;
+  background-color: #fff;
+  width: 350px;
+  min-height: 348px;
+  padding: 30px 50px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  border-radius: 5px;
+}
+
+.cancel {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.modal__title {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #03514e;
+}
+
+.modal-overlay--visible {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease-in-out;
+
+}
+
+.modal--visible {
+  display: block;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.mod__inp {
+  outline: none;
+  color: #03514e;
+  padding: 15px 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  /* border: 1px solid #01736f; */
+  border: 2px solid #01736f;
+  transition: .5s;
+  letter-spacing: .5px;
+}
+
+.modal__form-name {
+  margin-bottom: 30px;
+}
+
+.modal__form-email {
+  margin-bottom: 50px;
+}
+
+.mod__inp::placeholder {
+  color: #01736f;
+  opacity: .7;
+}
+
+.mod__inp:focus {
+  box-shadow: 2px 2px 20px 0px #01736f;
+}
+
+.modal__form-btn {
+  font-family: inherit;
+  padding: 15px;
+  font-size: 22px;
+  background-color: #03514e;
+  color: white;
+  border-radius: 5px;
+}

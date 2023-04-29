@@ -84,7 +84,7 @@
         </a>
       </div>
 
-      <div class="header__top--btn">
+      <div class="header__top--btn" data-path="form-popup">
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M14.25 3H3.75C2.92157 3 2.25 3.67157 2.25 4.5V15C2.25 15.8284 2.92157 16.5 3.75 16.5H14.25C15.0784 16.5 15.75 15.8284 15.75 15V4.5C15.75 3.67157 15.0784 3 14.25 3Z"
@@ -99,7 +99,7 @@
     </div>
     <!-- header__top-container -->
 
-     <div class="header__main">
+    <div class="header__main">
       <div class="container">
         <div class="header__main--inner">
           <div class="header__main--left-side">
@@ -119,8 +119,37 @@
             <img class="bg-image" src="./images/bg.jpg" alt="">
           </div>
         </div>
+
+        <div class="modals">
+          <div class="modal-overlay">
+            <div class="modal" data-target="form-popup">
+              <svg class="cancel" height="20px" width="20px" version="1.1" id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 496 496"
+                xml:space="preserve">
+                <path style="fill:#B5092B;"
+                  d="M496,248c0,136.8-111.2,248-248,248S0,384.8,0,248S111.2,0,248,0S496,111.2,496,248z" />
+                <path style="fill:#890027;" d="M248,0c136.8,0,248,111.2,248,248S384.8,496,248,496" />
+                <path style="fill:#9B0025;" d="M72.8,72.8c96.8-96.8,253.6-96.8,350.4,0s96.8,253.6,0,350.4" />
+                <g>
+                  <path style="fill:#EEFFFF;" d="M321.6,333.6c-3.2,0-5.6-0.8-8-3.2l-148-148c-4.8-4.8-4.8-12,0-16.8s12-4.8,16.8,0l148,148
+		c4.8,4.8,4.8,12,0,16.8C328,332.8,324.8,333.6,321.6,333.6z" />
+                  <path style="fill:#EEFFFF;" d="M174.4,333.6c-3.2,0-5.6-0.8-8-3.2c-4.8-4.8-4.8-12,0-16.8l148-148c4.8-4.8,12-4.8,16.8,0
+		s4.8,12,0,16.8l-148.8,148C180,332.8,176.8,333.6,174.4,333.6z" />
+                </g>
+              </svg>
+              <h3 class="modal__title">Beautyness</h3>
+
+              <form class="modal__form">
+                <input class="mod__inp modal__form-name" type="text" placeholder="Ваше имя">
+                <input class="mod__inp modal__form-email" type="email" placeholder="Ваш E-mail">
+                <button class="modal__form-btn">Забронировать</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
       </div>
-    </div> 
+    </div>
   </header>
 
 
@@ -561,30 +590,30 @@
           </div>
 
           <div class="our__blog-card">
-            <img src="./images/card-img1.jpg" alt="">
+            <img src="./images/card-img2.jpg" alt="">
             <div class="our__blog-card-about">
               <div class="our__blog-card-title">
                 <p class="card__title-date">September 30, 2021</p>
                 <div class="card__title-defice"></div>
-                <p class="card__title-name">Peter Bergson</p>
+                <p class="card__title-name">John Walker</p>
               </div>
-              <h3 class="card-name">How to make the make-up stay last</h3>
-              <p class="card-text">Therapeutic aromatherapy can help bring balance both mentally, physically, and
-                different blends.</p>
+              <h3 class="card-name">Tips to improve your body via cleansing</h3>
+              <p class="card-text">Whether you’re looking to stress, boost energy, improve sleep, clear sinuses, or
+                relieve a headache.</p>
             </div>
           </div>
 
           <div class="our__blog-card">
-            <img src="./images/card-img1.jpg" alt="">
+            <img src="./images/card-img3.jpg" alt="">
             <div class="our__blog-card-about">
               <div class="our__blog-card-title">
                 <p class="card__title-date">September 30, 2021</p>
                 <div class="card__title-defice"></div>
-                <p class="card__title-name">Peter Bergson</p>
+                <p class="card__title-name">Christina John</p>
               </div>
-              <h3 class="card-name">How to make the make-up stay last</h3>
-              <p class="card-text">Therapeutic aromatherapy can help bring balance both mentally, physically, and
-                different blends.</p>
+              <h3 class="card-name">Experience the beauty at our beauty spa</h3>
+              <p class="card-text">We’ve created a range of proprietary aromatherapy blends to enhance your massage or
+                skin therapy.</p>
             </div>
           </div>
 
@@ -597,7 +626,7 @@
     </section>
 
     <!-- CONTACTS FOOTER -->
-     <section class="contacts__footer">
+    <section class="contacts__footer">
       <div class="container">
         <div class="contacts__footer-footer-top">
 
