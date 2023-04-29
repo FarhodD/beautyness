@@ -1,783 +1,1196 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <!-- STYLES -->
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/animation.css" />
+    <link rel="stylesheet" href="./styles/adaptive.css" />
+  </head>
 
-  <!-- STYLES -->
-  <link rel="stylesheet" href="./styles/main.css">
-  <link rel="stylesheet" href="./styles/style.css">
-  <link rel="stylesheet" href="./styles/animation.css">
-  <link rel="stylesheet" href="./styles/adaptive.css">
-</head>
-
-<body>
-  <!-- HEADER -->
-  <header class="header">
-    <div class="header__top-container">
-      <a href="#" class="logo__link">
-        <img src="./images/logo.svg" alt="">
-      </a>
-      <a href="tel:" class="phone__block">
-        <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M14.05 5.5C15.0267 5.69057 15.9244 6.16826 16.6281 6.87194C17.3317 7.57561 17.8094 8.47326 18 9.45L14.05 5.5ZM14.05 1.5C16.0793 1.72544 17.9716 2.63417 19.4162 4.07701C20.8609 5.51984 21.772 7.41101 22 9.44L14.05 1.5ZM21 17.42V20.42C21.0011 20.6985 20.9441 20.9742 20.8325 21.2293C20.7209 21.4845 20.5573 21.7136 20.3521 21.9019C20.1469 22.0901 19.9046 22.2335 19.6407 22.3227C19.3769 22.4119 19.0974 22.4451 18.82 22.42C15.7428 22.0856 12.787 21.0341 10.19 19.35C7.77382 17.8147 5.72533 15.7662 4.18999 13.35C2.49997 10.7412 1.44824 7.77099 1.11999 4.68C1.095 4.40347 1.12787 4.12476 1.21649 3.86162C1.30512 3.59849 1.44757 3.35669 1.63476 3.15162C1.82196 2.94655 2.0498 2.78271 2.30379 2.67052C2.55777 2.55833 2.83233 2.50026 3.10999 2.5H6.11C6.5953 2.49522 7.06579 2.66708 7.43376 2.98353C7.80173 3.29999 8.04207 3.73945 8.10999 4.22C8.23662 5.18007 8.47145 6.12273 8.81 7.03C8.94454 7.38792 8.97366 7.77691 8.8939 8.15088C8.81415 8.52485 8.62886 8.86811 8.35999 9.14L7.09 10.41C8.51355 12.9135 10.5864 14.9864 13.09 16.41L14.36 15.14C14.6319 14.8711 14.9751 14.6858 15.3491 14.6061C15.7231 14.5263 16.1121 14.5555 16.47 14.69C17.3773 15.0286 18.3199 15.2634 19.28 15.39C19.7658 15.4585 20.2094 15.7032 20.5265 16.0775C20.8437 16.4518 21.0122 16.9296 21 17.42Z"
-            stroke="#7A9CA5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-        <span class="phone__block-text">Call Us - (+22) 123 456 7890</span>
-      </a>
-      <nav class="menu__links">
-        <a href="#" class="menu__link">Home</a>
-        <a href="#" class="menu__link">About</a>
-        <a href="#" class="menu__link">Pages</a>
-      </nav>
-
-      <button class="burger__menu" onclick="toggleMenu()">
-        <span class="burger__line"></span>
-        <span class="burger__line"></span>
-        <span class="burger__line"></span>
-      </button>
-
-      <nav class="submenu">
-        <a href="#" class="submenu__link">Home</a>
-        <a href="#" class="submenu__link">About</a>
-        <a href="#" class="submenu__link">Pages</a>
-      </nav>
-
-      <div class="contacts">
-        <a href="#" class="contacts__text">Contact Us</a>
-        <a href="#" class="contact__link">
-          <svg class="facebook" width="10" height="19" viewBox="0 0 10 19" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M9.18359 10.375L9.67578 7.14062H6.54688V5.03125C6.54688 4.11719 6.96875 3.27344 8.375 3.27344H9.81641V0.496094C9.81641 0.496094 8.51562 0.25 7.28516 0.25C4.71875 0.25 3.03125 1.83203 3.03125 4.64453V7.14062H0.148438V10.375H3.03125V18.25H6.54688V10.375H9.18359Z"
-              fill="#141414" />
-          </svg>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header__top-container">
+        <a href="#" class="logo__link">
+          <img src="./images/logo.svg" alt="" />
         </a>
-        <a href="#" class="contact__link">
-          <svg class="twitter" width="18" height="16" viewBox="0 0 18 16" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
+        <a href="tel:" class="phone__block">
+          <svg
+            width="23"
+            height="24"
+            viewBox="0 0 23 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <path
-              d="M16.1367 4.59375C16.8398 4.06641 17.4727 3.43359 17.9648 2.69531C17.332 2.97656 16.5938 3.1875 15.8555 3.25781C16.6289 2.80078 17.1914 2.09766 17.4727 1.21875C16.7695 1.64062 15.9609 1.95703 15.1523 2.13281C14.4492 1.39453 13.5 0.972656 12.4453 0.972656C10.4062 0.972656 8.75391 2.625 8.75391 4.66406C8.75391 4.94531 8.78906 5.22656 8.85938 5.50781C5.80078 5.33203 3.05859 3.85547 1.23047 1.64062C0.914062 2.16797 0.738281 2.80078 0.738281 3.50391C0.738281 4.76953 1.37109 5.89453 2.39062 6.5625C1.79297 6.52734 1.19531 6.38672 0.703125 6.10547V6.14062C0.703125 7.93359 1.96875 9.41016 3.65625 9.76172C3.375 9.83203 3.02344 9.90234 2.70703 9.90234C2.46094 9.90234 2.25 9.86719 2.00391 9.83203C2.46094 11.3086 3.83203 12.3633 5.44922 12.3984C4.18359 13.3828 2.60156 13.9805 0.878906 13.9805C0.5625 13.9805 0.28125 13.9453 0 13.9102C1.61719 14.9648 3.55078 15.5625 5.66016 15.5625C12.4453 15.5625 16.1367 9.97266 16.1367 5.08594C16.1367 4.91016 16.1367 4.76953 16.1367 4.59375Z"
-              fill="#141414" />
+              d="M14.05 5.5C15.0267 5.69057 15.9244 6.16826 16.6281 6.87194C17.3317 7.57561 17.8094 8.47326 18 9.45L14.05 5.5ZM14.05 1.5C16.0793 1.72544 17.9716 2.63417 19.4162 4.07701C20.8609 5.51984 21.772 7.41101 22 9.44L14.05 1.5ZM21 17.42V20.42C21.0011 20.6985 20.9441 20.9742 20.8325 21.2293C20.7209 21.4845 20.5573 21.7136 20.3521 21.9019C20.1469 22.0901 19.9046 22.2335 19.6407 22.3227C19.3769 22.4119 19.0974 22.4451 18.82 22.42C15.7428 22.0856 12.787 21.0341 10.19 19.35C7.77382 17.8147 5.72533 15.7662 4.18999 13.35C2.49997 10.7412 1.44824 7.77099 1.11999 4.68C1.095 4.40347 1.12787 4.12476 1.21649 3.86162C1.30512 3.59849 1.44757 3.35669 1.63476 3.15162C1.82196 2.94655 2.0498 2.78271 2.30379 2.67052C2.55777 2.55833 2.83233 2.50026 3.10999 2.5H6.11C6.5953 2.49522 7.06579 2.66708 7.43376 2.98353C7.80173 3.29999 8.04207 3.73945 8.10999 4.22C8.23662 5.18007 8.47145 6.12273 8.81 7.03C8.94454 7.38792 8.97366 7.77691 8.8939 8.15088C8.81415 8.52485 8.62886 8.86811 8.35999 9.14L7.09 10.41C8.51355 12.9135 10.5864 14.9864 13.09 16.41L14.36 15.14C14.6319 14.8711 14.9751 14.6858 15.3491 14.6061C15.7231 14.5263 16.1121 14.5555 16.47 14.69C17.3773 15.0286 18.3199 15.2634 19.28 15.39C19.7658 15.4585 20.2094 15.7032 20.5265 16.0775C20.8437 16.4518 21.0122 16.9296 21 17.42Z"
+              stroke="#7A9CA5"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
           </svg>
+          <span class="phone__block-text">Call Us - (+22) 123 456 7890</span>
         </a>
-        <a href="#" class="contact__link">
-          <svg class="linkedIn" width="16" height="16" viewBox="0 0 16 16" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M3.64062 16V5.48828H0.371094V16H3.64062ZM1.98828 4.08203C3.04297 4.08203 3.88672 3.20312 3.88672 2.14844C3.88672 1.12891 3.04297 0.285156 1.98828 0.285156C0.96875 0.285156 0.125 1.12891 0.125 2.14844C0.125 3.20312 0.96875 4.08203 1.98828 4.08203ZM15.8398 16H15.875V10.2344C15.875 7.42188 15.2422 5.24219 11.9375 5.24219C10.3555 5.24219 9.30078 6.12109 8.84375 6.92969H8.80859V5.48828H5.67969V16H8.94922V10.7969C8.94922 9.42578 9.19531 8.125 10.8828 8.125C12.5703 8.125 12.6055 9.67188 12.6055 10.9023V16H15.8398Z"
-              fill="#141414" />
-          </svg>
-        </a>
-      </div>
+        <nav class="menu__links">
+          <a href="#" class="menu__link">Home</a>
+          <a href="#" class="menu__link">About</a>
+          <a href="#" class="menu__link">Pages</a>
+        </nav>
 
-      <div class="header__top--btn" data-path="form-popup">
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M14.25 3H3.75C2.92157 3 2.25 3.67157 2.25 4.5V15C2.25 15.8284 2.92157 16.5 3.75 16.5H14.25C15.0784 16.5 15.75 15.8284 15.75 15V4.5C15.75 3.67157 15.0784 3 14.25 3Z"
-            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          <path d="M12 1.5V4.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          <path d="M6 1.5V4.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          <path d="M2.25 7.5H15.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
+        <button class="burger__menu" onclick="toggleMenu()">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
 
-        <span class="btn__text">Reservation</span>
-      </div>
-    </div>
-    <!-- header__top-container -->
+        <nav class="submenu">
+          <a href="#" class="submenu__link">Home</a>
+          <a href="#" class="submenu__link">About</a>
+          <a href="#" class="submenu__link">Pages</a>
+        </nav>
 
-    <div class="header__main">
-      <div class="container">
-        <div class="header__main--inner">
-          <div class="header__main--left-side">
-            <div class="logo__info">
-              <img class="logo-info--img" src="./images/logo-info.png" alt="">
-              <span class="logo-info--text">Welcome to Beautyness!!!</span>
-            </div>
-            <h1>Bring The well being & beauty naturally!!!</h1>
-            <p class="header__text">Your body does a lot for you, and your caring therapist can help you return the
-              favor in a way that benefits both your physical and mental wellness.
-            </p>
-            <button class="header__btn">Make a reservation</button>
-          </div>
-
-          <div class="header__main--right-side">
-            <div class="rect"></div>
-            <img class="bg-image" src="./images/bg.jpg" alt="">
-          </div>
+        <div class="contacts">
+          <a href="#" class="contacts__text">Contact Us</a>
+          <a href="#" class="contact__link">
+            <svg
+              class="facebook"
+              width="10"
+              height="19"
+              viewBox="0 0 10 19"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.18359 10.375L9.67578 7.14062H6.54688V5.03125C6.54688 4.11719 6.96875 3.27344 8.375 3.27344H9.81641V0.496094C9.81641 0.496094 8.51562 0.25 7.28516 0.25C4.71875 0.25 3.03125 1.83203 3.03125 4.64453V7.14062H0.148438V10.375H3.03125V18.25H6.54688V10.375H9.18359Z"
+                fill="#141414"
+              />
+            </svg>
+          </a>
+          <a href="#" class="contact__link">
+            <svg
+              class="twitter"
+              width="18"
+              height="16"
+              viewBox="0 0 18 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.1367 4.59375C16.8398 4.06641 17.4727 3.43359 17.9648 2.69531C17.332 2.97656 16.5938 3.1875 15.8555 3.25781C16.6289 2.80078 17.1914 2.09766 17.4727 1.21875C16.7695 1.64062 15.9609 1.95703 15.1523 2.13281C14.4492 1.39453 13.5 0.972656 12.4453 0.972656C10.4062 0.972656 8.75391 2.625 8.75391 4.66406C8.75391 4.94531 8.78906 5.22656 8.85938 5.50781C5.80078 5.33203 3.05859 3.85547 1.23047 1.64062C0.914062 2.16797 0.738281 2.80078 0.738281 3.50391C0.738281 4.76953 1.37109 5.89453 2.39062 6.5625C1.79297 6.52734 1.19531 6.38672 0.703125 6.10547V6.14062C0.703125 7.93359 1.96875 9.41016 3.65625 9.76172C3.375 9.83203 3.02344 9.90234 2.70703 9.90234C2.46094 9.90234 2.25 9.86719 2.00391 9.83203C2.46094 11.3086 3.83203 12.3633 5.44922 12.3984C4.18359 13.3828 2.60156 13.9805 0.878906 13.9805C0.5625 13.9805 0.28125 13.9453 0 13.9102C1.61719 14.9648 3.55078 15.5625 5.66016 15.5625C12.4453 15.5625 16.1367 9.97266 16.1367 5.08594C16.1367 4.91016 16.1367 4.76953 16.1367 4.59375Z"
+                fill="#141414"
+              />
+            </svg>
+          </a>
+          <a href="#" class="contact__link">
+            <svg
+              class="linkedIn"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3.64062 16V5.48828H0.371094V16H3.64062ZM1.98828 4.08203C3.04297 4.08203 3.88672 3.20312 3.88672 2.14844C3.88672 1.12891 3.04297 0.285156 1.98828 0.285156C0.96875 0.285156 0.125 1.12891 0.125 2.14844C0.125 3.20312 0.96875 4.08203 1.98828 4.08203ZM15.8398 16H15.875V10.2344C15.875 7.42188 15.2422 5.24219 11.9375 5.24219C10.3555 5.24219 9.30078 6.12109 8.84375 6.92969H8.80859V5.48828H5.67969V16H8.94922V10.7969C8.94922 9.42578 9.19531 8.125 10.8828 8.125C12.5703 8.125 12.6055 9.67188 12.6055 10.9023V16H15.8398Z"
+                fill="#141414"
+              />
+            </svg>
+          </a>
         </div>
 
-        <div class="modals">
-          <div class="modal-overlay">
-            <div class="modal" data-target="form-popup">
-              <svg class="cancel" height="20px" width="20px" version="1.1" id="Layer_1"
-                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 496 496"
-                xml:space="preserve">
-                <path style="fill:#B5092B;"
-                  d="M496,248c0,136.8-111.2,248-248,248S0,384.8,0,248S111.2,0,248,0S496,111.2,496,248z" />
-                <path style="fill:#890027;" d="M248,0c136.8,0,248,111.2,248,248S384.8,496,248,496" />
-                <path style="fill:#9B0025;" d="M72.8,72.8c96.8-96.8,253.6-96.8,350.4,0s96.8,253.6,0,350.4" />
-                <g>
-                  <path style="fill:#EEFFFF;" d="M321.6,333.6c-3.2,0-5.6-0.8-8-3.2l-148-148c-4.8-4.8-4.8-12,0-16.8s12-4.8,16.8,0l148,148
-		c4.8,4.8,4.8,12,0,16.8C328,332.8,324.8,333.6,321.6,333.6z" />
-                  <path style="fill:#EEFFFF;" d="M174.4,333.6c-3.2,0-5.6-0.8-8-3.2c-4.8-4.8-4.8-12,0-16.8l148-148c4.8-4.8,12-4.8,16.8,0
-		s4.8,12,0,16.8l-148.8,148C180,332.8,176.8,333.6,174.4,333.6z" />
-                </g>
-              </svg>
-              <h3 class="modal__title">Beautyness</h3>
+        <button class="header__top--btn modalBtn" data-path="form-popup">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14.25 3H3.75C2.92157 3 2.25 3.67157 2.25 4.5V15C2.25 15.8284 2.92157 16.5 3.75 16.5H14.25C15.0784 16.5 15.75 15.8284 15.75 15V4.5C15.75 3.67157 15.0784 3 14.25 3Z"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M12 1.5V4.5"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M6 1.5V4.5"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M2.25 7.5H15.75"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
 
-              <form class="modal__form">
-                <input class="mod__inp modal__form-name" type="text" placeholder="Ваше имя">
-                <input class="mod__inp modal__form-email" type="email" placeholder="Ваш E-mail">
-                <button class="modal__form-btn">Забронировать</button>
+          <!-- <span class="btn__text"> -->
+          Reservation
+          <!-- </span> -->
+        </button>
+      </div>
+      <!-- header__top-container -->
+
+      <div class="header__main">
+        <div class="container">
+          <div class="header__main--inner">
+            <div class="header__main--left-side">
+              <div class="logo__info">
+                <img
+                  class="logo-info--img"
+                  src="./images/logo-info.png"
+                  alt=""
+                />
+                <span class="logo-info--text">Welcome to Beautyness!!!</span>
+              </div>
+              <h1>Bring The well being & beauty naturally!!!</h1>
+              <p class="header__text">
+                Your body does a lot for you, and your caring therapist can help
+                you return the favor in a way that benefits both your physical
+                and mental wellness.
+              </p>
+              <button class="header__btn modalBtn" data-path="form-popup">
+                Make a reservation
+              </button>
+            </div>
+
+            <div class="header__main--right-side">
+              <div class="rect"></div>
+              <img class="bg-image" src="./images/bg.jpg" alt="" />
+            </div>
+          </div>
+
+          <div class="modals">
+            <div class="modal-overlay">
+              <div class="modal modal--1" data-target="spaAdnMassage">
+                Окно 1
+              </div>
+              <div class="modal modal--2" data-target="hairAndBeauty">
+                Окно 2
+              </div>
+              <div class="modal modal--3" data-target="bodyTreatments">
+                Окно 3
+              </div>
+
+              <div class="modal" data-target="form-popup">
+                <button class="cancel">
+                  <svg
+                    height="20px"
+                    width="20px"
+                    version="1.1"
+                    id="Layer_1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 496 496"
+                    xml:space="preserve"
+                  >
+                    <path
+                      style="fill: #b5092b"
+                      d="M496,248c0,136.8-111.2,248-248,248S0,384.8,0,248S111.2,0,248,0S496,111.2,496,248z"
+                    />
+                    <path
+                      style="fill: #890027"
+                      d="M248,0c136.8,0,248,111.2,248,248S384.8,496,248,496"
+                    />
+                    <path
+                      style="fill: #9b0025"
+                      d="M72.8,72.8c96.8-96.8,253.6-96.8,350.4,0s96.8,253.6,0,350.4"
+                    />
+                    <g>
+                      <path
+                        style="fill: #eeffff"
+                        d="M321.6,333.6c-3.2,0-5.6-0.8-8-3.2l-148-148c-4.8-4.8-4.8-12,0-16.8s12-4.8,16.8,0l148,148
+                    c4.8,4.8,4.8,12,0,16.8C328,332.8,324.8,333.6,321.6,333.6z"
+                      />
+                      <path
+                        style="fill: #eeffff"
+                        d="M174.4,333.6c-3.2,0-5.6-0.8-8-3.2c-4.8-4.8-4.8-12,0-16.8l148-148c4.8-4.8,12-4.8,16.8,0
+                      s4.8,12,0,16.8l-148.8,148C180,332.8,176.8,333.6,174.4,333.6z"
+                      />
+                    </g>
+                  </svg>
+                </button>
+                <h3 class="modal__title">Beautyness</h3>
+
+                <form class="modal__form">
+                  <input
+                    class="mod__inp modal__form-name"
+                    type="text"
+                    placeholder="Your full name"
+                  />
+                  <input
+                    class="mod__inp modal__form-email"
+                    type="email"
+                    placeholder="Your E-mail"
+                  />
+                  <button class="modal__form-btn">MAKE A RESERVATION</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="main">
+      <section class="cards__section container">
+        <div class="cards">
+          <div class="card">
+            <img class="card__img" src="./images/card-img1.jpg" alt="" />
+            <h2 class="card__title">Spa & Massage</h2>
+            <p class="card__text">
+              Your wellness goals and the areas of preference, then unwind with
+              a customized massage experience.
+            </p>
+            <button class="card__btn modalBtn" data-path="spaAdnMassage">
+              Read more
+            </button>
+          </div>
+          <div class="card">
+            <img class="card__img" src="./images/card-img2.jpg" alt="" />
+            <h2 class="card__title">Hair & Beauty</h2>
+            <p class="card__text">
+              Combining skin-type-specific cleansing & toning, exfoliation,
+              deep-pore cleansing extractions customized treatment.
+            </p>
+            <button class="card__btn modalBtn" data-path="hairAndBeauty">
+              Read more
+            </button>
+          </div>
+          <div class="card">
+            <img class="card__img" src="./images/card-img3.jpg" alt="" />
+            <h2 class="card__title">Body Treatments</h2>
+            <p class="card__text">
+              Offers therapeutic benefits such as relief of muscle tension and
+              increased circulation to the areas worked.
+            </p>
+            <button class="card__btn modalBtn" data-path="bodyTreatments">
+              Read more
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- CARE -->
+      <section class="care">
+        <div class="container">
+          <div class="care__inner">
+            <div class="care__left-side">
+              <p class="care__left-name">Take Your Care</p>
+              <h2 class="care__title">
+                Elevate Your Lifestyle by Bring Balance and Well Being Into Your
+                Life
+              </h2>
+              <p class="care__text">
+                Designed to allow you to unwind and feel confident that you’re
+                in good, caring hands. Our first priority is cleanliness. We
+                have a full-time staff whose job is to ensure that the
+                environment at Beautyness remains.
+              </p>
+              <div class="care__cards">
+                <div class="care__card">
+                  <img
+                    class="care__card-img"
+                    src="./images/beauty-experts.png"
+                    alt=""
+                  />
+                  <p class="care__card-name">Beauty</p>
+                  <p class="care__card-name">Experts</p>
+                </div>
+                <div class="care__card">
+                  <img
+                    class="care__card-img"
+                    src="./images/quality.png"
+                    alt=""
+                  />
+                  <p class="care__card-name">Quality</p>
+                  <p class="care__card-name">Services</p>
+                </div>
+                <div class="care__card">
+                  <img
+                    class="care__card-img"
+                    src="./images/nature.png"
+                    alt=""
+                  />
+                  <p class="care__card-name">100%</p>
+                  <p class="care__card-name">Nature</p>
+                </div>
+              </div>
+            </div>
+            <div class="care__right-side">
+              <img class="care__right-bg-1" src="./images/bg-1.jpg" alt="" />
+              <img class="care__right-bg-2" src="./images/bg-2.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section class="our__services">
+        <div class="container">
+          <div class="our__services-inner">
+            <p class="our__services-name">Our Services</p>
+            <h2 class="our__services-title">
+              Creative excellence and the <br />
+              unparalleled hospitality
+            </h2>
+
+            <div class="services">
+              <div class="service__info">
+                <div class="service__info-img">
+                  <img src="./images/girls.jpg" alt="" />
+                </div>
+
+                <ul class="service__info-service-price">
+                  <li class="service-price--item">
+                    <div class="service-price-about">
+                      <h3 class="service__name">Deep Tissue</h3>
+                      <p class="service__price">
+                        <span>from</span> <span class="price">$48.00</span>
+                      </p>
+                    </div>
+                    <p class="service__about">
+                      A therapeutic massage that used for relieving muscles.
+                    </p>
+                  </li>
+
+                  <li class="service-price--item">
+                    <div class="service-price-about">
+                      <h3 class="service__name">Body Scrub</h3>
+                      <p class="service__price">
+                        <span>from</span> <span class="price">$18.00</span>
+                      </p>
+                    </div>
+                    <p class="service__about">
+                      Perfect way to relieve all that unwanted stress in body.
+                    </p>
+                  </li>
+
+                  <li class="service-price--item">
+                    <div class="service-price-about">
+                      <h3 class="service__name">Foot Massage</h3>
+                      <p class="service__price">
+                        <span>from</span> <span class="price">$25.00</span>
+                      </p>
+                    </div>
+                    <p class="service__about">
+                      Get a relaxing massage focused on your feet and lower
+                      legs.
+                    </p>
+                  </li>
+
+                  <li class="service-price--item">
+                    <div class="service-price-about">
+                      <h3 class="service__name">Scalp Treatments</h3>
+                      <p class="service__price">
+                        <span>from</span> <span class="price">$15.00</span>
+                      </p>
+                    </div>
+                    <p class="service__about">
+                      Superior gray creates a rich, natural look with less
+                      fading.
+                    </p>
+                  </li>
+                  <button class="service__btn">GET AN APPOINTMENT</button>
+                </ul>
+              </div>
+            </div>
+
+            <div class="services services__bottom">
+              <div class="service__info">
+                <div class="service__info-img">
+                  <img src="./images/smiling-girl.jpg" alt="" />
+                </div>
+
+                <ul class="service__info-service-price">
+                  <li class="service-price--item">
+                    <div class="service-price-about">
+                      <h3 class="service__name">Fertility Massage</h3>
+                      <p class="service__price">
+                        <span>from</span> <span class="price">$18.00</span>
+                      </p>
+                    </div>
+                    <p class="service__about">
+                      Help support reproductive health, the menstrual cycle.
+                    </p>
+                  </li>
+
+                  <li class="service-price--item">
+                    <div class="service-price-about">
+                      <h3 class="service__name">Blemish Buster</h3>
+                      <p class="service__price">
+                        <span>from</span> <span class="price">$40.00</span>
+                      </p>
+                    </div>
+                    <p class="service__about">
+                      Perfect way to relieve all that unwanted stress in body.
+                    </p>
+                  </li>
+
+                  <li class="service-price--item">
+                    <div class="service-price-about">
+                      <h3 class="service__name">Oxygen Facial</h3>
+                      <p class="service__price">
+                        <span>from</span> <span class="price">$32.00</span>
+                      </p>
+                    </div>
+                    <p class="service__about">
+                      Hydrates, tones, lifts, and adds radiance to the skin.
+                    </p>
+                  </li>
+
+                  <li class="service-price--item">
+                    <div class="service-price-about">
+                      <h3 class="service__name">Lash Lift</h3>
+                      <p class="service__price">
+                        <span>from</span> <span class="price">$25.00</span>
+                      </p>
+                    </div>
+                    <p class="service__about">
+                      Treatment for natural lashes that can add curl and
+                      definition.
+                    </p>
+                  </li>
+                  <button class="service__btn">GET AN APPOINTMENT</button>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- REVIEWS -->
+      <section class="reviews">
+        <div class="container">
+          <p class="reviews__text">Testimonials</p>
+          <h2 class="reviews__title">What our Customers says...</h2>
+
+          <div class="review__cards">
+            <div class="review__card">
+              <p class="review__card-text--about">
+                “Made an appointment with Beautyness and it was the best
+                experience in a salon I have ever had. They went above and
+                beyond to make sure I got what I wanted, & patiently explained
+                her process “
+              </p>
+              <div class="review__card-user">
+                <div class="review__card-img">
+                  <img class="card__img-user" src="./images/boy.jpg" alt="" />
+                </div>
+                <div class="review__card-user--info">
+                  <ul class="stars">
+                    <li class="star">
+                      <svg
+                        width="15"
+                        height="14"
+                        viewBox="0 0 15 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.19102 11.0573L11.4094 13.575L10.2899 8.82975L14.0169 5.637L9.1091 5.22525L7.19102 0.75L5.27295 5.22525L0.365173 5.637L4.09208 8.82975L2.97265 13.575L7.19102 11.0573Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </li>
+                    <li class="star">
+                      <svg
+                        width="15"
+                        height="14"
+                        viewBox="0 0 15 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.19102 11.0573L11.4094 13.575L10.2899 8.82975L14.0169 5.637L9.1091 5.22525L7.19102 0.75L5.27295 5.22525L0.365173 5.637L4.09208 8.82975L2.97265 13.575L7.19102 11.0573Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </li>
+                    <li class="star">
+                      <svg
+                        width="15"
+                        height="14"
+                        viewBox="0 0 15 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.19102 11.0573L11.4094 13.575L10.2899 8.82975L14.0169 5.637L9.1091 5.22525L7.19102 0.75L5.27295 5.22525L0.365173 5.637L4.09208 8.82975L2.97265 13.575L7.19102 11.0573Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </li>
+                    <li class="star">
+                      <svg
+                        width="15"
+                        height="14"
+                        viewBox="0 0 15 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.19102 11.0573L11.4094 13.575L10.2899 8.82975L14.0169 5.637L9.1091 5.22525L7.19102 0.75L5.27295 5.22525L0.365173 5.637L4.09208 8.82975L2.97265 13.575L7.19102 11.0573Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </li>
+                    <li class="star">
+                      <svg
+                        width="15"
+                        height="14"
+                        viewBox="0 0 15 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M14.6348 5.637L9.72711 5.2185L7.80901 0.75L5.89091 5.22525L0.983215 5.637L4.71011 8.82975L3.59061 13.575L7.80901 11.0573L12.0274 13.575L10.9148 8.82975L14.6348 5.637ZM7.80901 9.795V3.5175L8.97621 6.2445L11.9659 6.501L9.69981 8.445L10.3823 11.334L7.80901 9.795Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </li>
+                  </ul>
+                  <h3 class="username">James Williams</h3>
+                  <p class="country">United States</p>
+                </div>
+                <div class="figures">
+                  <div class="figure">
+                    <svg
+                      width="28"
+                      height="56"
+                      viewBox="0 0 28 56"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M27.9939 28.3639L0.357544 56.0003V0.727539H27.9939V28.3639Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </div>
+                  <div class="figure">
+                    <svg
+                      width="28"
+                      height="56"
+                      viewBox="0 0 28 56"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M27.9939 28.3639L0.357544 56.0003V0.727539H27.9939V28.3639Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="review__card">
+              <div class="review__card-text">
+                <p class="review__card-text--about">
+                  “Made an appointment with Beautyness and it was the best
+                  experience in a salon I have ever had. They went above and
+                  beyond to make sure I got what I wanted, & patiently explained
+                  her process “
+                </p>
+              </div>
+
+              <div class="review__card-user">
+                <div class="review__card-img">
+                  <img class="card__img-user" src="./images/girl.jpg" alt="" />
+                </div>
+                <div class="review__card-user--info">
+                  <ul class="stars">
+                    <li class="star">
+                      <svg
+                        width="15"
+                        height="14"
+                        viewBox="0 0 15 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.19102 11.0573L11.4094 13.575L10.2899 8.82975L14.0169 5.637L9.1091 5.22525L7.19102 0.75L5.27295 5.22525L0.365173 5.637L4.09208 8.82975L2.97265 13.575L7.19102 11.0573Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </li>
+                    <li class="star">
+                      <svg
+                        width="15"
+                        height="14"
+                        viewBox="0 0 15 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.19102 11.0573L11.4094 13.575L10.2899 8.82975L14.0169 5.637L9.1091 5.22525L7.19102 0.75L5.27295 5.22525L0.365173 5.637L4.09208 8.82975L2.97265 13.575L7.19102 11.0573Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </li>
+                    <li class="star">
+                      <svg
+                        width="15"
+                        height="14"
+                        viewBox="0 0 15 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.19102 11.0573L11.4094 13.575L10.2899 8.82975L14.0169 5.637L9.1091 5.22525L7.19102 0.75L5.27295 5.22525L0.365173 5.637L4.09208 8.82975L2.97265 13.575L7.19102 11.0573Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </li>
+                    <li class="star">
+                      <svg
+                        width="15"
+                        height="14"
+                        viewBox="0 0 15 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.19102 11.0573L11.4094 13.575L10.2899 8.82975L14.0169 5.637L9.1091 5.22525L7.19102 0.75L5.27295 5.22525L0.365173 5.637L4.09208 8.82975L2.97265 13.575L7.19102 11.0573Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </li>
+                    <li class="star">
+                      <svg
+                        width="15"
+                        height="14"
+                        viewBox="0 0 15 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M14.6348 5.637L9.72711 5.2185L7.80901 0.75L5.89091 5.22525L0.983215 5.637L4.71011 8.82975L3.59061 13.575L7.80901 11.0573L12.0274 13.575L10.9148 8.82975L14.6348 5.637ZM7.80901 9.795V3.5175L8.97621 6.2445L11.9659 6.501L9.69981 8.445L10.3823 11.334L7.80901 9.795Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </li>
+                  </ul>
+                  <h3 class="username">James Williams</h3>
+                  <p class="country">United States</p>
+                </div>
+
+                <div class="figures">
+                  <div class="figure">
+                    <svg
+                      width="28"
+                      height="56"
+                      viewBox="0 0 28 56"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M27.9939 28.3639L0.357544 56.0003V0.727539H27.9939V28.3639Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </div>
+                  <div class="figure">
+                    <svg
+                      width="28"
+                      height="56"
+                      viewBox="0 0 28 56"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M27.9939 28.3639L0.357544 56.0003V0.727539H27.9939V28.3639Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BENEFITS -->
+      <section class="benefits">
+        <div class="container">
+          <p class="benefits__text">Our Awesome Benefits</p>
+          <h2 class="benefits__title">What you’ll get from Us</h2>
+          <div class="benefits__inner">
+            <div class="benefits__block">
+              <img
+                class="benefits__block-img"
+                src="./images/Frame.jpg"
+                alt=""
+              />
+              <h3 class="benefits__block-title">Built with you in mind</h3>
+              <p class="benefits__block-text">
+                We know how important it is to maintain strong relationships
+                with clients.
+              </p>
+            </div>
+            <div class="benefits__block">
+              <img
+                class="benefits__block-img"
+                src="./images/Frame.jpg"
+                alt=""
+              />
+              <h3 class="benefits__block-title">The Perfect Salon Services</h3>
+              <p class="benefits__block-text">
+                Talented, educated, and fashion-forward artists meet the unique
+                needs of client.
+              </p>
+            </div>
+            <div class="benefits__block">
+              <img
+                class="benefits__block-img"
+                src="./images/Frame.jpg"
+                alt=""
+              />
+              <h3 class="benefits__block-title">Skin Deep Experiences</h3>
+              <p class="benefits__block-text">
+                Appropriate for all skin types, sun damage, fine lines and
+                wrinkles, acne, and oily.
+              </p>
+            </div>
+            <div class="benefits__block">
+              <img
+                class="benefits__block-img"
+                src="./images/Frame.jpg"
+                alt=""
+              />
+              <h3 class="benefits__block-title">Essential Spa Pedicure</h3>
+              <p class="benefits__block-text">
+                Indulge in a soothing foot bath along with a callous smoothing
+                exfoliating scrub.
+              </p>
+            </div>
+            <div class="benefits__block">
+              <img
+                class="benefits__block-img"
+                src="./images/Frame.jpg"
+                alt=""
+              />
+              <h3 class="benefits__block-title">Skilled Spa Services</h3>
+              <p class="benefits__block-text">
+                Our skilled estheticians offer an array of refreshing
+                treatments.
+              </p>
+            </div>
+            <div class="benefits__block">
+              <img
+                class="benefits__block-img"
+                src="./images/Frame.jpg"
+                alt=""
+              />
+              <h3 class="benefits__block-title">Perfect & Natural Products</h3>
+              <p class="benefits__block-text">
+                We offer the very best in luxury beauty products for both hair
+                and skin.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DISCOUT -->
+
+      <section class="discount">
+        <div class="container">
+          <div class="discount__inner">
+            <div class="discount__left">
+              <p class="discount__left-text">Flat Discount</p>
+              <h2 class="discount__left-title">
+                Claim upto 50% offer on the most popular services...
+              </h2>
+              <p class="discount__left-about">
+                Our Retreat is not meant to be an occasional treat, but rather a
+                part of your routine that restores balance to your daily life.
+              </p>
+
+              <div class="discount__left-info-block">
+                <div class="info__block-contacts">
+                  <div class="info__block-contact">
+                    <div class="circles">
+                      <div class="circle"></div>
+                      <div class="circle"></div>
+                      <div class="circle"></div>
+                    </div>
+                    <a href="mailto:info@beautyness.com" class="contacts__mail"
+                      >MAIL US : <br />
+                      info@beautyness.com
+                    </a>
+                  </div>
+                  <div class="info__block-contact">
+                    <div class="circles">
+                      <div class="circle"></div>
+                      <div class="circle"></div>
+                      <div class="circle"></div>
+                    </div>
+                    <a href="tel: +123589012" class="contacts__tel"
+                      >CALL US :<br />
+                      (+1) 235 890 12
+                    </a>
+                  </div>
+                </div>
+
+                <div class="info__block-discount">
+                  <p class="info__block-discount-text">- Get Flat -</p>
+                  <p class="info__block-discount-number">50%</p>
+                  <p class="info__block-discount-discount">Discount</p>
+                </div>
+              </div>
+            </div>
+            <div class="discount__right">
+              <form class="discount__right-inner">
+                <input type="text" class="dicount__inp" />
+                <input type="email" class="dicount__inp" />
+                <input type="tel" class="dicount__inp" />
+                <input type="text" class="dicount__inp" />
+                <textarea rows="5"></textarea>
+                <button class="discount__right-btn">Отправить</button>
               </form>
             </div>
           </div>
         </div>
+      </section>
 
-      </div>
-    </div>
-  </header>
+      <!-- OUR BLOG -->
+      <section class="our__blog">
+        <div class="container">
+          <p class="our__blog-text">Our Blog</p>
+          <h2 class="our__blog-title">Latest Updates</h2>
 
-
-  <!-- MAIN -->
-  <main class="main">
-    <section class="cards__section container">
-      <div class="cards">
-        <div class="card">
-          <img class="card__img" src="./images/card-img1.jpg" alt="">
-          <h2 class="card__title">Spa & Massage</h2>
-          <p class="card__text">Your wellness goals and the areas of preference, then unwind with a customized massage
-            experience.
-          </p>
-          <button class="card__btn">Read more</button>
-        </div>
-        <div class="card">
-          <img class="card__img" src="./images/card-img2.jpg" alt="">
-          <h2 class="card__title">Hair & Beauty</h2>
-          <p class="card__text">Combining skin-type-specific cleansing & toning, exfoliation, deep-pore cleansing
-            extractions customized treatment.
-          </p>
-          <button class="card__btn">Read more</button>
-        </div>
-        <div class="card">
-          <img class="card__img" src="./images/card-img3.jpg" alt="">
-          <h2 class="card__title">Body Treatments</h2>
-          <p class="card__text">Offers therapeutic benefits such as relief of muscle tension and increased circulation
-            to the areas worked.
-          </p>
-          <button class="card__btn">Read more</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- CARE -->
-    <section class="care">
-      <div class="container">
-        <div class="care__inner">
-          <div class="care__left-side">
-            <p class="care__left-name">Take Your Care</p>
-            <h2 class="care__title">Elevate Your Lifestyle by Bring Balance and Well Being Into Your Life</h2>
-            <p class="care__text">Designed to allow you to unwind and feel confident that you’re in good, caring hands.
-              Our first priority is cleanliness. We have a full-time staff whose job is to ensure that the environment
-              at Beautyness remains.
-            </p>
-            <div class="care__cards">
-              <div class="care__card">
-                <img class="care__card-img" src="./images/beauty-experts.png" alt="">
-                <p class="care__card-name">Beauty</p>
-                <p class="care__card-name">Experts</p>
+          <div class="our__blog-cards">
+            <div class="our__blog-card">
+              <img src="./images/card-img1.jpg" alt="" />
+              <div class="our__blog-card-about">
+                <div class="our__blog-card-title">
+                  <p class="card__title-date">September 30, 2021</p>
+                  <div class="card__title-defice"></div>
+                  <p class="card__title-name">Peter Bergson</p>
+                </div>
+                <h3 class="card-name">How to make the make-up stay last</h3>
+                <p class="card-text">
+                  Therapeutic aromatherapy can help bring balance both mentally,
+                  physically, and different blends.
+                </p>
               </div>
-              <div class="care__card">
-                <img class="care__card-img" src="./images/quality.png" alt="">
-                <p class="care__card-name">Quality</p>
-                <p class="care__card-name">Services</p>
+            </div>
+
+            <div class="our__blog-card">
+              <img src="./images/card-img2.jpg" alt="" />
+              <div class="our__blog-card-about">
+                <div class="our__blog-card-title">
+                  <p class="card__title-date">September 30, 2021</p>
+                  <div class="card__title-defice"></div>
+                  <p class="card__title-name">John Walker</p>
+                </div>
+                <h3 class="card-name">
+                  Tips to improve your body via cleansing
+                </h3>
+                <p class="card-text">
+                  Whether you’re looking to stress, boost energy, improve sleep,
+                  clear sinuses, or relieve a headache.
+                </p>
               </div>
-              <div class="care__card">
-                <img class="care__card-img" src="./images/nature.png" alt="">
-                <p class="care__card-name">100%</p>
-                <p class="care__card-name">Nature</p>
+            </div>
+
+            <div class="our__blog-card">
+              <img src="./images/card-img3.jpg" alt="" />
+              <div class="our__blog-card-about">
+                <div class="our__blog-card-title">
+                  <p class="card__title-date">September 30, 2021</p>
+                  <div class="card__title-defice"></div>
+                  <p class="card__title-name">Christina John</p>
+                </div>
+                <h3 class="card-name">
+                  Experience the beauty at our beauty spa
+                </h3>
+                <p class="card-text">
+                  We’ve created a range of proprietary aromatherapy blends to
+                  enhance your massage or skin therapy.
+                </p>
               </div>
             </div>
           </div>
-          <div class="care__right-side">
-            <img class="care__right-bg-1" src="./images/bg-1.jpg" alt="">
-            <img class="care__right-bg-2" src="./images/bg-2.jpg" alt="">
+
+          <div class="our__blog-btn--container">
+            <button class="our__blog-btn">view more stories</button>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- SERVICES -->
-    <section class="our__services">
-      <div class="container">
-        <div class="our__services-inner">
-          <p class="our__services-name">Our Services</p>
-          <h2 class="our__services-title">Creative excellence and the <br> unparalleled hospitality</h2>
+      <!-- CONTACTS FOOTER -->
+      <section class="contacts__footer">
+        <div class="container">
+          <div class="contacts__footer-footer-top">
+            <div class="contacts__footer-logo">
+              <svg
+                width="298"
+                height="65"
+                viewBox="0 0 298 65"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M32.5 62.5C49.0685 62.5 62.5 49.0685 62.5 32.5C62.5 15.9315 49.0685 2.5 32.5 2.5C15.9315 2.5 2.5 15.9315 2.5 32.5C2.5 49.0685 15.9315 62.5 32.5 62.5Z"
+                  stroke="#5C8692"
+                  stroke-width="5"
+                />
+                <path
+                  d="M48.7815 23.9991C49.0288 26.5687 48.0987 29.1453 46.1959 31.1623L34.8073 43.2691L19.1207 44.7789L17.8004 31.0612L29.2089 18.9687C31.1118 16.9518 33.8316 15.6598 36.7699 15.377L47.0471 15.6231L48.7815 23.9991Z"
+                  stroke="#5C8692"
+                  stroke-width="5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M39.394 23.6362L9.84851 53.1817"
+                  stroke="#5C8692"
+                  stroke-width="5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M41.3637 35.4546H27.5758"
+                  stroke="#5C8692"
+                  stroke-width="5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M39.394 23.6362H25.6061"
+                  stroke="#5C8692"
+                  stroke-width="5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M97.5859 31.1172C99.9557 31.2995 101.889 31.7422 103.387 32.4453C104.897 33.1354 105.984 33.9883 106.648 35.0039C107.325 36.0065 107.664 37.0872 107.664 38.2461C107.664 39.8997 107.221 41.3125 106.336 42.4844C105.45 43.6432 104.181 44.5221 102.527 45.1211C100.874 45.707 98.9075 46 96.6289 46C96.056 46 95.0729 45.9805 93.6797 45.9414C92.2994 45.9023 90.9062 45.8828 89.5 45.8828C86.7526 45.8828 84.7018 45.9219 83.3476 46V45.1992C84.233 45.1602 84.8776 45.056 85.2812 44.8867C85.6849 44.7174 85.9583 44.4049 86.1015 43.9492C86.2578 43.4935 86.3359 42.7643 86.3359 41.7617V21.918C86.3359 20.9154 86.2578 20.1862 86.1015 19.7305C85.9583 19.2747 85.6849 18.9622 85.2812 18.793C84.8776 18.6237 84.233 18.5195 83.3476 18.4805V17.6797C84.6888 17.7578 86.7135 17.7969 89.4218 17.7969C90.4896 17.7969 91.6744 17.7839 92.9765 17.7578C94.2786 17.7318 95.1836 17.7188 95.6914 17.7188C97.8398 17.7188 99.6497 17.9857 101.121 18.5195C102.605 19.0404 103.719 19.776 104.461 20.7266C105.203 21.6641 105.574 22.7578 105.574 24.0078C105.574 24.9974 105.288 25.9674 104.715 26.918C104.142 27.8685 103.25 28.7148 102.039 29.457C100.841 30.1862 99.3567 30.7135 97.5859 31.0391V31.1172ZM94.4218 30.9609C96.1536 30.9609 97.3646 30.3685 98.0547 29.1836C98.7578 27.9987 99.1093 26.4167 99.1093 24.4375C99.1093 22.4323 98.7968 20.9414 98.1718 19.9648C97.5468 18.9753 96.5508 18.4805 95.1836 18.4805C94.4674 18.4805 93.9336 18.5781 93.582 18.7734C93.2435 18.9557 93.0091 19.2878 92.8789 19.7695C92.7617 20.2383 92.7031 20.9544 92.7031 21.918V30.9609H94.4218ZM92.7031 41.7617C92.7031 42.7253 92.7682 43.4349 92.8984 43.8906C93.0416 44.3464 93.3021 44.6589 93.6797 44.8281C94.0573 44.9974 94.6497 45.082 95.457 45.082C99.1679 45.082 101.023 42.7448 101.023 38.0703C101.023 35.974 100.49 34.3789 99.4218 33.2852C98.3672 32.1914 96.6875 31.6445 94.3828 31.6445H92.7031V41.7617ZM117.234 33.6367C117.194 34.0273 117.175 34.6523 117.175 35.5117C117.175 37.2826 117.422 38.7539 117.917 39.9258C118.412 41.0846 119.05 41.9375 119.831 42.4844C120.625 43.0182 121.472 43.2852 122.37 43.2852C124.571 43.2852 126.335 42.2174 127.663 40.082L128.366 40.3164C128.028 41.4102 127.5 42.4323 126.784 43.3828C126.081 44.3203 125.183 45.0885 124.089 45.6875C123.008 46.2734 121.771 46.5664 120.378 46.5664C118.542 46.5664 116.928 46.1758 115.534 45.3945C114.154 44.6133 113.073 43.4284 112.292 41.8398C111.524 40.2383 111.14 38.2526 111.14 35.8828C111.14 33.4609 111.556 31.4232 112.39 29.7695C113.223 28.1029 114.375 26.8529 115.847 26.0195C117.318 25.1862 119.017 24.7695 120.944 24.7695C125.958 24.7695 128.464 27.7253 128.464 33.6367H117.234ZM123.425 32.875C123.464 30.7917 123.249 29.0599 122.78 27.6797C122.325 26.2995 121.628 25.6094 120.691 25.6094C119.74 25.6094 118.946 26.2018 118.308 27.3867C117.683 28.5586 117.299 30.388 117.155 32.875H123.425ZM142.643 29.125C142.643 28.0182 142.376 27.1458 141.842 26.5078C141.321 25.8698 140.501 25.5508 139.381 25.5508C138.86 25.5508 138.34 25.6354 137.819 25.8047C137.298 25.9609 136.868 26.2018 136.53 26.5273C137.272 26.7747 137.851 27.1654 138.268 27.6992C138.685 28.2201 138.893 28.8776 138.893 29.6719C138.893 30.2188 138.756 30.7135 138.483 31.1562C138.222 31.5859 137.845 31.931 137.35 32.1914C136.855 32.4388 136.289 32.5625 135.651 32.5625C134.791 32.5625 134.101 32.2695 133.58 31.6836C133.073 31.0977 132.819 30.362 132.819 29.4766C132.819 28.0964 133.561 26.9766 135.045 26.1172C136.673 25.2188 138.704 24.7695 141.139 24.7695C143.873 24.7695 145.82 25.3685 146.979 26.5664C147.539 27.1263 147.916 27.8229 148.112 28.6562C148.307 29.4896 148.405 30.6549 148.405 32.1523V43.0312C148.405 43.6823 148.463 44.1445 148.58 44.418C148.711 44.6784 148.932 44.8086 149.244 44.8086C149.674 44.8086 150.169 44.5807 150.729 44.125L151.139 44.8086C150.527 45.3164 149.863 45.6875 149.147 45.9219C148.431 46.1562 147.571 46.2734 146.569 46.2734C145.215 46.2734 144.238 45.974 143.639 45.375C143.04 44.776 142.741 43.9948 142.741 43.0312C142.09 44.112 141.237 44.9258 140.182 45.4727C139.127 46.0065 138.001 46.2734 136.803 46.2734C135.28 46.2734 134.056 45.8763 133.131 45.082C132.22 44.2747 131.764 43.1549 131.764 41.7227C131.764 40.3294 132.22 39.1771 133.131 38.2656C134.043 37.3542 135.455 36.5469 137.369 35.8438C137.578 35.7656 138.255 35.5117 139.401 35.082C140.547 34.6393 141.373 34.1901 141.881 33.7344C142.389 33.2786 142.643 32.7773 142.643 32.2305V29.125ZM142.643 33.8711C142.474 34.1576 142.194 34.457 141.803 34.7695C141.425 35.069 140.879 35.4401 140.162 35.8828C139.316 36.4688 138.652 37.1328 138.17 37.875C137.689 38.6042 137.448 39.5156 137.448 40.6094C137.448 41.651 137.675 42.4323 138.131 42.9531C138.587 43.4609 139.186 43.7148 139.928 43.7148C140.983 43.7148 141.888 43.168 142.643 42.0742V33.8711ZM173.033 41.6445C173.033 42.8815 173.222 43.7799 173.599 44.3398C173.99 44.8867 174.654 45.1602 175.591 45.1602V46C174.758 45.9219 173.931 45.8828 173.111 45.8828C170.767 45.8828 168.821 46.0716 167.271 46.4492V42.8359C166.06 45.3229 163.912 46.5664 160.826 46.5664C158.834 46.5664 157.382 46.0456 156.47 45.0039C156.028 44.5091 155.709 43.8516 155.513 43.0312C155.331 42.2109 155.24 41.1367 155.24 39.8086V29.6719C155.24 28.4479 155.045 27.556 154.654 26.9961C154.276 26.4362 153.619 26.1562 152.681 26.1562V25.3164C153.528 25.3945 154.354 25.4336 155.162 25.4336C157.492 25.4336 159.439 25.2513 161.002 24.8867V41.4492C161.002 42.556 161.164 43.3958 161.49 43.9688C161.828 44.5286 162.46 44.8086 163.384 44.8086C164.087 44.8086 164.732 44.6068 165.318 44.2031C165.917 43.7865 166.392 43.2266 166.744 42.5234C167.095 41.8073 167.271 41.0195 167.271 40.1602V29.6719C167.271 28.4479 167.076 27.556 166.685 26.9961C166.308 26.4362 165.65 26.1562 164.712 26.1562V25.3164C165.559 25.3945 166.386 25.4336 167.193 25.4336C169.524 25.4336 171.47 25.2513 173.033 24.8867V41.6445ZM191.04 25.3555V26.1562H186.313V42.2891C186.313 43.0833 186.456 43.6497 186.743 43.9883C187.029 44.3138 187.472 44.4766 188.071 44.4766C189.204 44.4766 190.109 43.6758 190.786 42.0742L191.469 42.4453C190.467 45.1927 188.644 46.5664 186.001 46.5664C184.243 46.5664 182.908 46.1107 181.997 45.1992C181.437 44.6523 181.053 43.9622 180.844 43.1289C180.649 42.2826 180.552 41.1172 180.552 39.6328V26.1562H177.192V25.3555H180.552V20.043C182.752 20.043 184.673 19.6133 186.313 18.7539V25.3555H191.04ZM205.687 25.3164C206.937 25.3945 208.233 25.4336 209.574 25.4336C210.915 25.4336 211.944 25.3945 212.66 25.3164V26.1172C212.1 26.2604 211.592 26.5924 211.137 27.1133C210.694 27.6341 210.277 28.4479 209.887 29.5547L202.738 49.6719C202.204 51.0651 201.618 52.0156 200.98 52.5234C200.199 53.1875 199.034 53.5195 197.484 53.5195C196.794 53.5195 196.111 53.4023 195.434 53.168C194.77 52.9466 194.216 52.5951 193.773 52.1133C193.344 51.6315 193.129 51.0326 193.129 50.3164C193.129 49.4961 193.422 48.8385 194.008 48.3438C194.594 47.849 195.368 47.6016 196.332 47.6016C197.23 47.6016 197.953 47.8229 198.5 48.2656C199.06 48.7083 199.34 49.3268 199.34 50.1211C199.34 50.668 199.158 51.1758 198.793 51.6445C198.441 52.1263 197.953 52.4844 197.328 52.7188C197.523 52.7448 197.829 52.7578 198.246 52.7578C199.913 52.7578 201.13 51.7031 201.898 49.5938L202.543 47.6797L194.047 28.4023C193.63 27.4779 193.214 26.8724 192.797 26.5859C192.393 26.2995 191.983 26.1562 191.566 26.1562V25.3164C193.324 25.4727 195.154 25.5508 197.055 25.5508C198.63 25.5508 200.486 25.4727 202.621 25.3164V26.1562C202.048 26.1562 201.599 26.1758 201.273 26.2148C200.948 26.2539 200.668 26.3516 200.434 26.5078C200.212 26.6641 200.102 26.918 200.102 27.2695C200.102 27.582 200.193 27.9596 200.375 28.4023L205.277 40.2188L208.012 32.5234C208.441 31.2474 208.656 30.1797 208.656 29.3203C208.656 28.3047 208.396 27.5365 207.875 27.0156C207.354 26.4818 206.625 26.1823 205.687 26.1172V25.3164ZM222.972 28.4805C224.183 26.0065 226.37 24.7695 229.534 24.7695C230.628 24.7695 231.52 24.8997 232.21 25.1602C232.913 25.4206 233.486 25.8047 233.929 26.3125C234.372 26.8203 234.691 27.4779 234.886 28.2852C235.081 29.0924 235.179 30.1732 235.179 31.5273V42.2891C235.179 43.0312 235.264 43.6107 235.433 44.0273C235.602 44.444 235.869 44.737 236.234 44.9062C236.598 45.0755 237.099 45.1602 237.737 45.1602V46C235.081 45.8958 233.323 45.8438 232.464 45.8438C231.644 45.8438 229.905 45.8958 227.249 46V45.1602C227.796 45.1602 228.226 45.0755 228.538 44.9062C228.851 44.737 229.072 44.444 229.202 44.0273C229.346 43.6107 229.417 43.0312 229.417 42.2891V29.8477C229.417 28.7539 229.235 27.9271 228.87 27.3672C228.519 26.8073 227.874 26.5273 226.937 26.5273C226.208 26.5273 225.537 26.7292 224.925 27.1328C224.326 27.5365 223.851 28.0964 223.499 28.8125C223.148 29.5156 222.972 30.2969 222.972 31.1562V42.2891C222.972 43.0312 223.043 43.6107 223.187 44.0273C223.33 44.444 223.558 44.737 223.87 44.9062C224.183 45.0755 224.606 45.1602 225.14 45.1602V46C222.692 45.8958 221.038 45.8438 220.179 45.8438C219.359 45.8438 217.516 45.8958 214.652 46V45.1602C215.29 45.1602 215.791 45.0755 216.155 44.9062C216.533 44.737 216.8 44.444 216.956 44.0273C217.125 43.6107 217.21 43.0312 217.21 42.2891V29.6719C217.21 28.4349 217.021 27.543 216.644 26.9961C216.266 26.4362 215.602 26.1562 214.652 26.1562V25.3164C215.498 25.3945 216.325 25.4336 217.132 25.4336C219.489 25.4336 221.435 25.2513 222.972 24.8867V28.4805ZM246.643 33.6367C246.604 34.0273 246.584 34.6523 246.584 35.5117C246.584 37.2826 246.832 38.7539 247.327 39.9258C247.821 41.0846 248.459 41.9375 249.241 42.4844C250.035 43.0182 250.881 43.2852 251.78 43.2852C253.98 43.2852 255.745 42.2174 257.073 40.082L257.776 40.3164C257.437 41.4102 256.91 42.4323 256.194 43.3828C255.491 44.3203 254.592 45.0885 253.498 45.6875C252.418 46.2734 251.181 46.5664 249.787 46.5664C247.952 46.5664 246.337 46.1758 244.944 45.3945C243.564 44.6133 242.483 43.4284 241.702 41.8398C240.933 40.2383 240.549 38.2526 240.549 35.8828C240.549 33.4609 240.966 31.4232 241.799 29.7695C242.633 28.1029 243.785 26.8529 245.256 26.0195C246.728 25.1862 248.427 24.7695 250.354 24.7695C255.367 24.7695 257.873 27.7253 257.873 33.6367H246.643ZM252.834 32.875C252.873 30.7917 252.659 29.0599 252.19 27.6797C251.734 26.2995 251.037 25.6094 250.1 25.6094C249.149 25.6094 248.355 26.2018 247.717 27.3867C247.092 28.5586 246.708 30.388 246.565 32.875H252.834ZM262.853 38.2852C263.114 40.5898 263.673 42.3932 264.533 43.6953C265.405 44.9974 266.636 45.6484 268.224 45.6484C269.005 45.6484 269.669 45.4141 270.216 44.9453C270.776 44.4635 271.056 43.7474 271.056 42.7969C271.056 42.0547 270.887 41.3906 270.548 40.8047C270.223 40.2188 269.806 39.6979 269.298 39.2422C268.791 38.7865 268.029 38.1615 267.013 37.3672C265.776 36.3646 264.845 35.5768 264.22 35.0039C263.608 34.431 263.081 33.7539 262.638 32.9727C262.196 32.1784 261.974 31.2799 261.974 30.2773C261.974 29.1315 262.287 28.1419 262.912 27.3086C263.537 26.4753 264.377 25.8438 265.431 25.4141C266.486 24.9844 267.632 24.7695 268.869 24.7695C269.884 24.7695 270.815 24.8932 271.662 25.1406C272.508 25.388 273.172 25.6745 273.654 26C273.914 26.1823 274.149 26.2734 274.357 26.2734C274.852 26.2734 275.164 25.7852 275.294 24.8086H276.173C276.069 26.1497 276.017 28.4935 276.017 31.8398H275.138C274.904 30.0951 274.377 28.6302 273.556 27.4453C272.749 26.2474 271.571 25.6484 270.021 25.6484C269.227 25.6484 268.576 25.8763 268.068 26.332C267.56 26.7878 267.306 27.4128 267.306 28.207C267.306 29.1055 267.606 29.8802 268.205 30.5312C268.804 31.1823 269.526 31.8073 270.373 32.4062C271.219 33.0052 271.837 33.4544 272.228 33.7539C273.322 34.5742 274.188 35.2904 274.826 35.9023C275.477 36.5143 276.004 37.2109 276.408 37.9922C276.811 38.7604 277.013 39.6458 277.013 40.6484C277.013 41.8203 276.668 42.8555 275.978 43.7539C275.301 44.6523 274.383 45.349 273.224 45.8438C272.065 46.3255 270.796 46.5664 269.416 46.5664C267.996 46.5664 266.759 46.2865 265.705 45.7266C264.91 45.3229 264.285 45.043 263.83 44.8867C263.752 44.8607 263.686 44.8477 263.634 44.8477C263.205 44.8477 262.892 45.3229 262.697 46.2734H261.818C261.922 44.75 261.974 42.0872 261.974 38.2852H262.853ZM282.13 38.2852C282.39 40.5898 282.95 42.3932 283.809 43.6953C284.682 44.9974 285.912 45.6484 287.501 45.6484C288.282 45.6484 288.946 45.4141 289.493 44.9453C290.053 44.4635 290.333 43.7474 290.333 42.7969C290.333 42.0547 290.164 41.3906 289.825 40.8047C289.499 40.2188 289.083 39.6979 288.575 39.2422C288.067 38.7865 287.305 38.1615 286.29 37.3672C285.053 36.3646 284.122 35.5768 283.497 35.0039C282.885 34.431 282.358 33.7539 281.915 32.9727C281.472 32.1784 281.251 31.2799 281.251 30.2773C281.251 29.1315 281.563 28.1419 282.188 27.3086C282.813 26.4753 283.653 25.8438 284.708 25.4141C285.762 24.9844 286.908 24.7695 288.145 24.7695C289.161 24.7695 290.092 24.8932 290.938 25.1406C291.785 25.388 292.449 25.6745 292.93 26C293.191 26.1823 293.425 26.2734 293.634 26.2734C294.128 26.2734 294.441 25.7852 294.571 24.8086H295.45C295.346 26.1497 295.294 28.4935 295.294 31.8398H294.415C294.18 30.0951 293.653 28.6302 292.833 27.4453C292.025 26.2474 290.847 25.6484 289.298 25.6484C288.503 25.6484 287.852 25.8763 287.344 26.332C286.837 26.7878 286.583 27.4128 286.583 28.207C286.583 29.1055 286.882 29.8802 287.481 30.5312C288.08 31.1823 288.803 31.8073 289.649 32.4062C290.496 33.0052 291.114 33.4544 291.505 33.7539C292.598 34.5742 293.464 35.2904 294.102 35.9023C294.753 36.5143 295.281 37.2109 295.684 37.9922C296.088 38.7604 296.29 39.6458 296.29 40.6484C296.29 41.8203 295.945 42.8555 295.255 43.7539C294.578 44.6523 293.66 45.349 292.501 45.8438C291.342 46.3255 290.072 46.5664 288.692 46.5664C287.273 46.5664 286.036 46.2865 284.981 45.7266C284.187 45.3229 283.562 45.043 283.106 44.8867C283.028 44.8607 282.963 44.8477 282.911 44.8477C282.481 44.8477 282.169 45.3229 281.973 46.2734H281.094C281.199 44.75 281.251 42.0872 281.251 38.2852H282.13Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
 
-          <div class="services">
-            <div class="service__info">
-              <div class="service__info-img">
-                <img src="./images/girls.jpg" alt="">
-              </div>
+            <div class="footer__soc-media-block">
+              <a href="#" class="footer__soc-media">
+                <svg
+                  width="10"
+                  height="16"
+                  viewBox="0 0 10 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1_522)">
+                    <path
+                      d="M8.71875 9L9.15625 6.125H6.375V4.25C6.375 3.4375 6.75 2.6875 8 2.6875H9.28125V0.21875C9.28125 0.21875 8.125 0 7.03125 0C4.75 0 3.25 1.40625 3.25 3.90625V6.125H0.6875V9H3.25V16H6.375V9H8.71875Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1_522">
+                      <rect width="10" height="16" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
 
-              <ul class="service__info-service-price">
-                <li class="service-price--item">
-                  <div class="service-price-about">
-                    <h3 class="service__name">Deep Tissue</h3>
-                    <p class="service__price"> <span>from</span> <span class="price">$48.00</span></p>
-                  </div>
-                  <p class="service__about">A therapeutic massage that used for relieving muscles.</p>
+              <a href="#" class="footer__soc-media">
+                <svg
+                  width="16"
+                  height="14"
+                  viewBox="0 0 16 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1_530)">
+                    <path
+                      d="M14.3438 3.75C14.9688 3.28125 15.5312 2.71875 15.9688 2.0625C15.4062 2.3125 14.75 2.5 14.0938 2.5625C14.7812 2.15625 15.2812 1.53125 15.5312 0.75C14.9062 1.125 14.1875 1.40625 13.4688 1.5625C12.8438 0.90625 12 0.53125 11.0625 0.53125C9.25 0.53125 7.78125 2 7.78125 3.8125C7.78125 4.0625 7.8125 4.3125 7.875 4.5625C5.15625 4.40625 2.71875 3.09375 1.09375 1.125C0.8125 1.59375 0.65625 2.15625 0.65625 2.78125C0.65625 3.90625 1.21875 4.90625 2.125 5.5C1.59375 5.46875 1.0625 5.34375 0.625 5.09375V5.125C0.625 6.71875 1.75 8.03125 3.25 8.34375C3 8.40625 2.6875 8.46875 2.40625 8.46875C2.1875 8.46875 2 8.4375 1.78125 8.40625C2.1875 9.71875 3.40625 10.6562 4.84375 10.6875C3.71875 11.5625 2.3125 12.0938 0.78125 12.0938C0.5 12.0938 0.25 12.0625 0 12.0312C1.4375 12.9688 3.15625 13.5 5.03125 13.5C11.0625 13.5 14.3438 8.53125 14.3438 4.1875C14.3438 4.03125 14.3438 3.90625 14.3438 3.75Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1_530">
+                      <rect width="16" height="14" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+
+              <a href="#" class="footer__soc-media">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1_526)">
+                    <path
+                      d="M3.125 14V4.65625H0.21875V14H3.125ZM1.65625 3.40625C2.59375 3.40625 3.34375 2.625 3.34375 1.6875C3.34375 0.78125 2.59375 0.03125 1.65625 0.03125C0.75 0.03125 0 0.78125 0 1.6875C0 2.625 0.75 3.40625 1.65625 3.40625ZM13.9688 14H14V8.875C14 6.375 13.4375 4.4375 10.5 4.4375C9.09375 4.4375 8.15625 5.21875 7.75 5.9375H7.71875V4.65625H4.9375V14H7.84375V9.375C7.84375 8.15625 8.0625 7 9.5625 7C11.0625 7 11.0938 8.375 11.0938 9.46875V14H13.9688Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1_526">
+                      <rect width="14" height="14" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+
+              <a href="#" class="footer__soc-media">
+                <svg
+                  width="17"
+                  height="18"
+                  viewBox="0 0 17 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1_534)">
+                    <path
+                      d="M8.5 4.60742C6.125 4.60742 4.23242 6.53711 4.23242 8.875C4.23242 11.25 6.125 13.1426 8.5 13.1426C10.8379 13.1426 12.7676 11.25 12.7676 8.875C12.7676 6.53711 10.8379 4.60742 8.5 4.60742ZM8.5 11.6582C6.97852 11.6582 5.7168 10.4336 5.7168 8.875C5.7168 7.35352 6.94141 6.12891 8.5 6.12891C10.0215 6.12891 11.2461 7.35352 11.2461 8.875C11.2461 10.4336 10.0215 11.6582 8.5 11.6582ZM13.918 4.45898C13.918 3.90234 13.4727 3.45703 12.916 3.45703C12.3594 3.45703 11.9141 3.90234 11.9141 4.45898C11.9141 5.01562 12.3594 5.46094 12.916 5.46094C13.4727 5.46094 13.918 5.01562 13.918 4.45898ZM16.7383 5.46094C16.6641 4.125 16.3672 2.9375 15.4023 1.97266C14.4375 1.00781 13.25 0.710938 11.9141 0.636719C10.541 0.5625 6.42188 0.5625 5.04883 0.636719C3.71289 0.710938 2.5625 1.00781 1.56055 1.97266C0.595703 2.9375 0.298828 4.125 0.224609 5.46094C0.150391 6.83398 0.150391 10.9531 0.224609 12.3262C0.298828 13.6621 0.595703 14.8125 1.56055 15.8145C2.5625 16.7793 3.71289 17.0762 5.04883 17.1504C6.42188 17.2246 10.541 17.2246 11.9141 17.1504C13.25 17.0762 14.4375 16.7793 15.4023 15.8145C16.3672 14.8125 16.6641 13.6621 16.7383 12.3262C16.8125 10.9531 16.8125 6.83398 16.7383 5.46094ZM14.957 13.7734C14.6973 14.5156 14.1035 15.0723 13.3984 15.3691C12.2852 15.8145 9.6875 15.7031 8.5 15.7031C7.27539 15.7031 4.67773 15.8145 3.60156 15.3691C2.85938 15.0723 2.30273 14.5156 2.00586 13.7734C1.56055 12.6973 1.67188 10.0996 1.67188 8.875C1.67188 7.6875 1.56055 5.08984 2.00586 3.97656C2.30273 3.27148 2.85938 2.71484 3.60156 2.41797C4.67773 1.97266 7.27539 2.08398 8.5 2.08398C9.6875 2.08398 12.2852 1.97266 13.3984 2.41797C14.1035 2.67773 14.6602 3.27148 14.957 3.97656C15.4023 5.08984 15.291 7.6875 15.291 8.875C15.291 10.0996 15.4023 12.6973 14.957 13.7734Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1_534">
+                      <rect width="17" height="18" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="contacts__footer-navs">
+            <div class="explore">
+              <h3 class="navs__title">Explore</h3>
+              <ul class="explore__inner">
+                <li class="explore__item">
+                  <a href="#" class="explore__link">Home</a>
                 </li>
-
-                <li class="service-price--item">
-                  <div class="service-price-about">
-                    <h3 class="service__name">Body Scrub</h3>
-                    <p class="service__price"> <span>from</span> <span class="price">$18.00</span></p>
-                  </div>
-                  <p class="service__about">Perfect way to relieve all that unwanted stress in body.</p>
+                <li class="explore__item">
+                  <a href="#" class="explore__link">About Us</a>
                 </li>
-
-                <li class="service-price--item">
-                  <div class="service-price-about">
-                    <h3 class="service__name">Foot Massage</h3>
-                    <p class="service__price"> <span>from</span> <span class="price">$25.00</span></p>
-                  </div>
-                  <p class="service__about">Get a relaxing massage focused on your feet and lower legs.</p>
+                <li class="explore__item">
+                  <a href="#" class="explore__link">Services</a>
                 </li>
-
-                <li class="service-price--item">
-                  <div class="service-price-about">
-                    <h3 class="service__name">Scalp Treatments</h3>
-                    <p class="service__price"> <span>from</span> <span class="price">$15.00</span></p>
-                  </div>
-                  <p class="service__about">Superior gray creates a rich, natural look with less fading.</p>
+                <li class="explore__item">
+                  <a href="#" class="explore__link">Articles</a>
                 </li>
-                <button class="service__btn">GET AN APPOINTMENT</button>
+                <li class="explore__item">
+                  <a href="#" class="explore__link">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+            <div class="utility__pages">
+              <h3 class="navs__title">Utility Pages</h3>
+              <ul class="utility__pages-list">
+                <li class="utility__pages-item">
+                  <a href="#" class="utility__pages-link">Style Guide</a>
+                </li>
+                <li class="utility__pages-item">
+                  <a href="#" class="utility__pages-link">404 Not Found</a>
+                </li>
+                <li class="utility__pages-item">
+                  <a href="#" class="utility__pages-link">Password Protected</a>
+                </li>
+                <li class="utility__pages-item">
+                  <a href="#" class="utility__pages-link">Licenses</a>
+                </li>
+                <li class="utility__pages-item">
+                  <a href="#" class="utility__pages-link">Changelog</a>
+                </li>
+              </ul>
+            </div>
+            <div class="keep-in-touch">
+              <h3 class="navs__title">Keep in Touch</h3>
+              <ul class="keep-in-touch--contacts">
+                <li class="contacts__item">
+                  <span class="contacts__item-name">Address :</span>
+                  <span class="contacts__item-value"
+                    >24A Kingston St, Los Vegas <br />
+                    NC 28202, USA.</span
+                  >
+                </li>
+                <li class="contacts__item">
+                  <span class="contacts__item-name">Mail : </span>
+                  <a
+                    href="mailto: support@doctors.com"
+                    class="contacts__item-link"
+                    >support@doctors.com</a
+                  >
+                </li>
+                <li class="contacts__item">
+                  <span class="contacts__item-name">Phone : </span>
+                  <a class="contacts__phone-link" href="tel: +221234567900"
+                    >(+22) 123 - 4567 - 900</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="working__hours">
+              <h3 class="navs__title">Working Hours</h3>
+              <ul class="working__hours-list">
+                <li class="working__hours-item">Mon to Fri: 7am - 6pm</li>
+                <li class="working__hours-item">Sat: 9am - 7pm</li>
+                <li class="working__hours-item">Sun: 9am - 6pm</li>
               </ul>
             </div>
           </div>
-
-          <div class="services services__bottom">
-            <div class="service__info">
-              <div class="service__info-img">
-                <img src="./images/smiling-girl.jpg" alt="">
-              </div>
-
-              <ul class="service__info-service-price">
-                <li class="service-price--item">
-                  <div class="service-price-about">
-                    <h3 class="service__name">Fertility Massage</h3>
-                    <p class="service__price"> <span>from</span> <span class="price">$18.00</span></p>
-                  </div>
-                  <p class="service__about">Help support reproductive health, the menstrual cycle.</p>
-                </li>
-
-                <li class="service-price--item">
-                  <div class="service-price-about">
-                    <h3 class="service__name">Blemish Buster</h3>
-                    <p class="service__price"> <span>from</span> <span class="price">$40.00</span></p>
-                  </div>
-                  <p class="service__about">Perfect way to relieve all that unwanted stress in body.</p>
-                </li>
-
-                <li class="service-price--item">
-                  <div class="service-price-about">
-                    <h3 class="service__name">Oxygen Facial</h3>
-                    <p class="service__price"> <span>from</span> <span class="price">$32.00</span></p>
-                  </div>
-                  <p class="service__about">Hydrates, tones, lifts, and adds radiance to the skin.</p>
-                </li>
-
-                <li class="service-price--item">
-                  <div class="service-price-about">
-                    <h3 class="service__name">Lash Lift</h3>
-                    <p class="service__price"> <span>from</span> <span class="price">$25.00</span></p>
-                  </div>
-                  <p class="service__about">Treatment for natural lashes that can add curl and definition.</p>
-                </li>
-                <button class="service__btn">GET AN APPOINTMENT</button>
-              </ul>
-            </div>
-          </div>
-
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <!-- REVIEWS -->
-    <section class="reviews">
+    <footer class="footer">
       <div class="container">
-        <p class="reviews__text">Testimonials</p>
-        <h2 class="reviews__title">What our Customers says...</h2>
-
-        <div class="review__cards">
-
-          <div class="review__card">
-            <p class="review__card-text--about">
-              “Made an appointment with Beautyness and it was the best experience in a salon I have ever had. They
-              went above and beyond to make sure I got what I wanted, & patiently explained her process “
-            </p>
-            <div class="review__card-user">
-              <div class="review__card-img">
-                <img class="card__img-user" src="./images/boy.jpg" alt="">
-              </div>
-              <div class="review__card-user--info">
-                <ul class="stars">
-                  <li class="star">
-                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M7.19102 11.0573L11.4094 13.575L10.2899 8.82975L14.0169 5.637L9.1091 5.22525L7.19102 0.75L5.27295 5.22525L0.365173 5.637L4.09208 8.82975L2.97265 13.575L7.19102 11.0573Z"
-                        fill="white" />
-                    </svg>
-                  </li>
-                  <li class="star">
-                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M7.19102 11.0573L11.4094 13.575L10.2899 8.82975L14.0169 5.637L9.1091 5.22525L7.19102 0.75L5.27295 5.22525L0.365173 5.637L4.09208 8.82975L2.97265 13.575L7.19102 11.0573Z"
-                        fill="white" />
-                    </svg>
-                  </li>
-                  <li class="star">
-                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M7.19102 11.0573L11.4094 13.575L10.2899 8.82975L14.0169 5.637L9.1091 5.22525L7.19102 0.75L5.27295 5.22525L0.365173 5.637L4.09208 8.82975L2.97265 13.575L7.19102 11.0573Z"
-                        fill="white" />
-                    </svg>
-                  </li>
-                  <li class="star">
-                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M7.19102 11.0573L11.4094 13.575L10.2899 8.82975L14.0169 5.637L9.1091 5.22525L7.19102 0.75L5.27295 5.22525L0.365173 5.637L4.09208 8.82975L2.97265 13.575L7.19102 11.0573Z"
-                        fill="white" />
-                    </svg>
-                  </li>
-                  <li class="star">
-                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M14.6348 5.637L9.72711 5.2185L7.80901 0.75L5.89091 5.22525L0.983215 5.637L4.71011 8.82975L3.59061 13.575L7.80901 11.0573L12.0274 13.575L10.9148 8.82975L14.6348 5.637ZM7.80901 9.795V3.5175L8.97621 6.2445L11.9659 6.501L9.69981 8.445L10.3823 11.334L7.80901 9.795Z"
-                        fill="white" />
-                    </svg>
-                  </li>
-                </ul>
-                <h3 class="username">James Williams</h3>
-                <p class="country">United States</p>
-              </div>
-              <div class="figures">
-                <div class="figure">
-                  <svg width="28" height="56" viewBox="0 0 28 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M27.9939 28.3639L0.357544 56.0003V0.727539H27.9939V28.3639Z" fill="white" />
-                  </svg>
-                </div>
-                <div class="figure">
-                  <svg width="28" height="56" viewBox="0 0 28 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M27.9939 28.3639L0.357544 56.0003V0.727539H27.9939V28.3639Z" fill="white" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="review__card">
-            <div class="review__card-text">
-              <p class="review__card-text--about">
-                “Made an appointment with Beautyness and it was the best experience in a salon I have ever had. They
-                went above and beyond to make sure I got what I wanted, & patiently explained her process “
-              </p>
-            </div>
-
-
-            <div class="review__card-user">
-              <div class="review__card-img">
-                <img class="card__img-user" src="./images/girl.jpg" alt="">
-              </div>
-              <div class="review__card-user--info">
-                <ul class="stars">
-                  <li class="star">
-                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M7.19102 11.0573L11.4094 13.575L10.2899 8.82975L14.0169 5.637L9.1091 5.22525L7.19102 0.75L5.27295 5.22525L0.365173 5.637L4.09208 8.82975L2.97265 13.575L7.19102 11.0573Z"
-                        fill="white" />
-                    </svg>
-                  </li>
-                  <li class="star">
-                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M7.19102 11.0573L11.4094 13.575L10.2899 8.82975L14.0169 5.637L9.1091 5.22525L7.19102 0.75L5.27295 5.22525L0.365173 5.637L4.09208 8.82975L2.97265 13.575L7.19102 11.0573Z"
-                        fill="white" />
-                    </svg>
-                  </li>
-                  <li class="star">
-                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M7.19102 11.0573L11.4094 13.575L10.2899 8.82975L14.0169 5.637L9.1091 5.22525L7.19102 0.75L5.27295 5.22525L0.365173 5.637L4.09208 8.82975L2.97265 13.575L7.19102 11.0573Z"
-                        fill="white" />
-                    </svg>
-                  </li>
-                  <li class="star">
-                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M7.19102 11.0573L11.4094 13.575L10.2899 8.82975L14.0169 5.637L9.1091 5.22525L7.19102 0.75L5.27295 5.22525L0.365173 5.637L4.09208 8.82975L2.97265 13.575L7.19102 11.0573Z"
-                        fill="white" />
-                    </svg>
-                  </li>
-                  <li class="star">
-                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M14.6348 5.637L9.72711 5.2185L7.80901 0.75L5.89091 5.22525L0.983215 5.637L4.71011 8.82975L3.59061 13.575L7.80901 11.0573L12.0274 13.575L10.9148 8.82975L14.6348 5.637ZM7.80901 9.795V3.5175L8.97621 6.2445L11.9659 6.501L9.69981 8.445L10.3823 11.334L7.80901 9.795Z"
-                        fill="white" />
-                    </svg>
-                  </li>
-                </ul>
-                <h3 class="username">James Williams</h3>
-                <p class="country">United States</p>
-              </div>
-
-              <div class="figures">
-                <div class="figure">
-                  <svg width="28" height="56" viewBox="0 0 28 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M27.9939 28.3639L0.357544 56.0003V0.727539H27.9939V28.3639Z" fill="white" />
-                  </svg>
-                </div>
-                <div class="figure">
-                  <svg width="28" height="56" viewBox="0 0 28 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M27.9939 28.3639L0.357544 56.0003V0.727539H27.9939V28.3639Z" fill="white" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="footer__copyright">
+          <p class="footer__copyright-value">
+            © Drafted by VictorFlow - Powered by Webflow
+          </p>
         </div>
       </div>
-    </section>
+    </footer>
 
-    <!-- BENEFITS -->
-    <section class="benefits">
-      <div class="container">
-        <p class="benefits__text">Our Awesome Benefits</p>
-        <h2 class="benefits__title">What you’ll get from Us</h2>
-        <div class="benefits__inner">
-          <div class="benefits__block">
-            <img class="benefits__block-img" src="./images/Frame.jpg" alt="">
-            <h3 class="benefits__block-title">Built with you in mind</h3>
-            <p class="benefits__block-text">We know how important it is to maintain strong relationships with clients.
-            </p>
-          </div>
-          <div class="benefits__block">
-            <img class="benefits__block-img" src="./images/Frame.jpg" alt="">
-            <h3 class="benefits__block-title">The Perfect Salon Services</h3>
-            <p class="benefits__block-text">Talented, educated, and fashion-forward artists meet the unique needs of
-              client.
-            </p>
-          </div>
-          <div class="benefits__block">
-            <img class="benefits__block-img" src="./images/Frame.jpg" alt="">
-            <h3 class="benefits__block-title">Skin Deep Experiences</h3>
-            <p class="benefits__block-text">Appropriate for all skin types, sun damage, fine lines and wrinkles, acne,
-              and oily.
-            </p>
-          </div>
-          <div class="benefits__block">
-            <img class="benefits__block-img" src="./images/Frame.jpg" alt="">
-            <h3 class="benefits__block-title">Essential Spa Pedicure</h3>
-            <p class="benefits__block-text">Indulge in a soothing foot bath along with a callous smoothing exfoliating
-              scrub.
-            </p>
-          </div>
-          <div class="benefits__block">
-            <img class="benefits__block-img" src="./images/Frame.jpg" alt="">
-            <h3 class="benefits__block-title">Skilled Spa Services</h3>
-            <p class="benefits__block-text">Our skilled estheticians offer an array of refreshing treatments.
-            </p>
-          </div>
-          <div class="benefits__block">
-            <img class="benefits__block-img" src="./images/Frame.jpg" alt="">
-            <h3 class="benefits__block-title">Perfect & Natural Products</h3>
-            <p class="benefits__block-text">We offer the very best in luxury beauty products for both hair and skin.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- DISCOUT -->
-
-    <section class="discount">
-      <div class="container">
-        <div class="discount__inner">
-          <div class="discount__left">
-            <p class="discount__left-text">Flat Discount</p>
-            <h2 class="discount__left-title">Claim upto 50% offer on the most popular services...</h2>
-            <p class="discount__left-about">Our Retreat is not meant to be an occasional treat, but rather a part of
-              your
-              routine that restores balance to your daily life.</p>
-
-            <div class="discount__left-info-block">
-              <div class="info__block-contacts">
-                <div class="info__block-contact">
-                  <div class="circles">
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                  </div>
-                  <a href="mailto:info@beautyness.com" class="contacts__mail">MAIL US : <br> info@beautyness.com </a>
-                </div>
-                <div class="info__block-contact">
-                  <div class="circles">
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                  </div>
-                  <a href="tel: +123589012" class="contacts__tel">CALL US :<br> (+1) 235 890 12 </a>
-                </div>
-              </div>
-
-              <div class="info__block-discount">
-                <p class="info__block-discount-text">- Get Flat -</p>
-                <p class="info__block-discount-number">50%</p>
-                <p class="info__block-discount-discount">Discount</p>
-              </div>
-
-            </div>
-          </div>
-          <div class="discount__right">
-            <form class="discount__right-inner">
-              <input type="text" class="dicount__inp">
-              <input type="email" class="dicount__inp">
-              <input type="tel" class="dicount__inp">
-              <input type="text" class="dicount__inp">
-              <textarea rows="5"></textarea>
-              <button class="discount__right-btn">Отправить</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- OUR BLOG -->
-    <section class="our__blog">
-      <div class="container">
-        <p class="our__blog-text">Our Blog</p>
-        <h2 class="our__blog-title">Latest Updates</h2>
-
-        <div class="our__blog-cards">
-
-          <div class="our__blog-card">
-            <img src="./images/card-img1.jpg" alt="">
-            <div class="our__blog-card-about">
-              <div class="our__blog-card-title">
-                <p class="card__title-date">September 30, 2021</p>
-                <div class="card__title-defice"></div>
-                <p class="card__title-name">Peter Bergson</p>
-              </div>
-              <h3 class="card-name">How to make the make-up stay last</h3>
-              <p class="card-text">Therapeutic aromatherapy can help bring balance both mentally, physically, and
-                different blends.</p>
-            </div>
-          </div>
-
-          <div class="our__blog-card">
-            <img src="./images/card-img2.jpg" alt="">
-            <div class="our__blog-card-about">
-              <div class="our__blog-card-title">
-                <p class="card__title-date">September 30, 2021</p>
-                <div class="card__title-defice"></div>
-                <p class="card__title-name">John Walker</p>
-              </div>
-              <h3 class="card-name">Tips to improve your body via cleansing</h3>
-              <p class="card-text">Whether you’re looking to stress, boost energy, improve sleep, clear sinuses, or
-                relieve a headache.</p>
-            </div>
-          </div>
-
-          <div class="our__blog-card">
-            <img src="./images/card-img3.jpg" alt="">
-            <div class="our__blog-card-about">
-              <div class="our__blog-card-title">
-                <p class="card__title-date">September 30, 2021</p>
-                <div class="card__title-defice"></div>
-                <p class="card__title-name">Christina John</p>
-              </div>
-              <h3 class="card-name">Experience the beauty at our beauty spa</h3>
-              <p class="card-text">We’ve created a range of proprietary aromatherapy blends to enhance your massage or
-                skin therapy.</p>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="our__blog-btn">
-          <button>view more stories</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACTS FOOTER -->
-    <section class="contacts__footer">
-      <div class="container">
-        <div class="contacts__footer-footer-top">
-
-          <div class="contacts__footer-logo">
-            <svg width="298" height="65" viewBox="0 0 298 65" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M32.5 62.5C49.0685 62.5 62.5 49.0685 62.5 32.5C62.5 15.9315 49.0685 2.5 32.5 2.5C15.9315 2.5 2.5 15.9315 2.5 32.5C2.5 49.0685 15.9315 62.5 32.5 62.5Z"
-                stroke="#5C8692" stroke-width="5" />
-              <path
-                d="M48.7815 23.9991C49.0288 26.5687 48.0987 29.1453 46.1959 31.1623L34.8073 43.2691L19.1207 44.7789L17.8004 31.0612L29.2089 18.9687C31.1118 16.9518 33.8316 15.6598 36.7699 15.377L47.0471 15.6231L48.7815 23.9991Z"
-                stroke="#5C8692" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M39.394 23.6362L9.84851 53.1817" stroke="#5C8692" stroke-width="5" stroke-linecap="round"
-                stroke-linejoin="round" />
-              <path d="M41.3637 35.4546H27.5758" stroke="#5C8692" stroke-width="5" stroke-linecap="round"
-                stroke-linejoin="round" />
-              <path d="M39.394 23.6362H25.6061" stroke="#5C8692" stroke-width="5" stroke-linecap="round"
-                stroke-linejoin="round" />
-              <path
-                d="M97.5859 31.1172C99.9557 31.2995 101.889 31.7422 103.387 32.4453C104.897 33.1354 105.984 33.9883 106.648 35.0039C107.325 36.0065 107.664 37.0872 107.664 38.2461C107.664 39.8997 107.221 41.3125 106.336 42.4844C105.45 43.6432 104.181 44.5221 102.527 45.1211C100.874 45.707 98.9075 46 96.6289 46C96.056 46 95.0729 45.9805 93.6797 45.9414C92.2994 45.9023 90.9062 45.8828 89.5 45.8828C86.7526 45.8828 84.7018 45.9219 83.3476 46V45.1992C84.233 45.1602 84.8776 45.056 85.2812 44.8867C85.6849 44.7174 85.9583 44.4049 86.1015 43.9492C86.2578 43.4935 86.3359 42.7643 86.3359 41.7617V21.918C86.3359 20.9154 86.2578 20.1862 86.1015 19.7305C85.9583 19.2747 85.6849 18.9622 85.2812 18.793C84.8776 18.6237 84.233 18.5195 83.3476 18.4805V17.6797C84.6888 17.7578 86.7135 17.7969 89.4218 17.7969C90.4896 17.7969 91.6744 17.7839 92.9765 17.7578C94.2786 17.7318 95.1836 17.7188 95.6914 17.7188C97.8398 17.7188 99.6497 17.9857 101.121 18.5195C102.605 19.0404 103.719 19.776 104.461 20.7266C105.203 21.6641 105.574 22.7578 105.574 24.0078C105.574 24.9974 105.288 25.9674 104.715 26.918C104.142 27.8685 103.25 28.7148 102.039 29.457C100.841 30.1862 99.3567 30.7135 97.5859 31.0391V31.1172ZM94.4218 30.9609C96.1536 30.9609 97.3646 30.3685 98.0547 29.1836C98.7578 27.9987 99.1093 26.4167 99.1093 24.4375C99.1093 22.4323 98.7968 20.9414 98.1718 19.9648C97.5468 18.9753 96.5508 18.4805 95.1836 18.4805C94.4674 18.4805 93.9336 18.5781 93.582 18.7734C93.2435 18.9557 93.0091 19.2878 92.8789 19.7695C92.7617 20.2383 92.7031 20.9544 92.7031 21.918V30.9609H94.4218ZM92.7031 41.7617C92.7031 42.7253 92.7682 43.4349 92.8984 43.8906C93.0416 44.3464 93.3021 44.6589 93.6797 44.8281C94.0573 44.9974 94.6497 45.082 95.457 45.082C99.1679 45.082 101.023 42.7448 101.023 38.0703C101.023 35.974 100.49 34.3789 99.4218 33.2852C98.3672 32.1914 96.6875 31.6445 94.3828 31.6445H92.7031V41.7617ZM117.234 33.6367C117.194 34.0273 117.175 34.6523 117.175 35.5117C117.175 37.2826 117.422 38.7539 117.917 39.9258C118.412 41.0846 119.05 41.9375 119.831 42.4844C120.625 43.0182 121.472 43.2852 122.37 43.2852C124.571 43.2852 126.335 42.2174 127.663 40.082L128.366 40.3164C128.028 41.4102 127.5 42.4323 126.784 43.3828C126.081 44.3203 125.183 45.0885 124.089 45.6875C123.008 46.2734 121.771 46.5664 120.378 46.5664C118.542 46.5664 116.928 46.1758 115.534 45.3945C114.154 44.6133 113.073 43.4284 112.292 41.8398C111.524 40.2383 111.14 38.2526 111.14 35.8828C111.14 33.4609 111.556 31.4232 112.39 29.7695C113.223 28.1029 114.375 26.8529 115.847 26.0195C117.318 25.1862 119.017 24.7695 120.944 24.7695C125.958 24.7695 128.464 27.7253 128.464 33.6367H117.234ZM123.425 32.875C123.464 30.7917 123.249 29.0599 122.78 27.6797C122.325 26.2995 121.628 25.6094 120.691 25.6094C119.74 25.6094 118.946 26.2018 118.308 27.3867C117.683 28.5586 117.299 30.388 117.155 32.875H123.425ZM142.643 29.125C142.643 28.0182 142.376 27.1458 141.842 26.5078C141.321 25.8698 140.501 25.5508 139.381 25.5508C138.86 25.5508 138.34 25.6354 137.819 25.8047C137.298 25.9609 136.868 26.2018 136.53 26.5273C137.272 26.7747 137.851 27.1654 138.268 27.6992C138.685 28.2201 138.893 28.8776 138.893 29.6719C138.893 30.2188 138.756 30.7135 138.483 31.1562C138.222 31.5859 137.845 31.931 137.35 32.1914C136.855 32.4388 136.289 32.5625 135.651 32.5625C134.791 32.5625 134.101 32.2695 133.58 31.6836C133.073 31.0977 132.819 30.362 132.819 29.4766C132.819 28.0964 133.561 26.9766 135.045 26.1172C136.673 25.2188 138.704 24.7695 141.139 24.7695C143.873 24.7695 145.82 25.3685 146.979 26.5664C147.539 27.1263 147.916 27.8229 148.112 28.6562C148.307 29.4896 148.405 30.6549 148.405 32.1523V43.0312C148.405 43.6823 148.463 44.1445 148.58 44.418C148.711 44.6784 148.932 44.8086 149.244 44.8086C149.674 44.8086 150.169 44.5807 150.729 44.125L151.139 44.8086C150.527 45.3164 149.863 45.6875 149.147 45.9219C148.431 46.1562 147.571 46.2734 146.569 46.2734C145.215 46.2734 144.238 45.974 143.639 45.375C143.04 44.776 142.741 43.9948 142.741 43.0312C142.09 44.112 141.237 44.9258 140.182 45.4727C139.127 46.0065 138.001 46.2734 136.803 46.2734C135.28 46.2734 134.056 45.8763 133.131 45.082C132.22 44.2747 131.764 43.1549 131.764 41.7227C131.764 40.3294 132.22 39.1771 133.131 38.2656C134.043 37.3542 135.455 36.5469 137.369 35.8438C137.578 35.7656 138.255 35.5117 139.401 35.082C140.547 34.6393 141.373 34.1901 141.881 33.7344C142.389 33.2786 142.643 32.7773 142.643 32.2305V29.125ZM142.643 33.8711C142.474 34.1576 142.194 34.457 141.803 34.7695C141.425 35.069 140.879 35.4401 140.162 35.8828C139.316 36.4688 138.652 37.1328 138.17 37.875C137.689 38.6042 137.448 39.5156 137.448 40.6094C137.448 41.651 137.675 42.4323 138.131 42.9531C138.587 43.4609 139.186 43.7148 139.928 43.7148C140.983 43.7148 141.888 43.168 142.643 42.0742V33.8711ZM173.033 41.6445C173.033 42.8815 173.222 43.7799 173.599 44.3398C173.99 44.8867 174.654 45.1602 175.591 45.1602V46C174.758 45.9219 173.931 45.8828 173.111 45.8828C170.767 45.8828 168.821 46.0716 167.271 46.4492V42.8359C166.06 45.3229 163.912 46.5664 160.826 46.5664C158.834 46.5664 157.382 46.0456 156.47 45.0039C156.028 44.5091 155.709 43.8516 155.513 43.0312C155.331 42.2109 155.24 41.1367 155.24 39.8086V29.6719C155.24 28.4479 155.045 27.556 154.654 26.9961C154.276 26.4362 153.619 26.1562 152.681 26.1562V25.3164C153.528 25.3945 154.354 25.4336 155.162 25.4336C157.492 25.4336 159.439 25.2513 161.002 24.8867V41.4492C161.002 42.556 161.164 43.3958 161.49 43.9688C161.828 44.5286 162.46 44.8086 163.384 44.8086C164.087 44.8086 164.732 44.6068 165.318 44.2031C165.917 43.7865 166.392 43.2266 166.744 42.5234C167.095 41.8073 167.271 41.0195 167.271 40.1602V29.6719C167.271 28.4479 167.076 27.556 166.685 26.9961C166.308 26.4362 165.65 26.1562 164.712 26.1562V25.3164C165.559 25.3945 166.386 25.4336 167.193 25.4336C169.524 25.4336 171.47 25.2513 173.033 24.8867V41.6445ZM191.04 25.3555V26.1562H186.313V42.2891C186.313 43.0833 186.456 43.6497 186.743 43.9883C187.029 44.3138 187.472 44.4766 188.071 44.4766C189.204 44.4766 190.109 43.6758 190.786 42.0742L191.469 42.4453C190.467 45.1927 188.644 46.5664 186.001 46.5664C184.243 46.5664 182.908 46.1107 181.997 45.1992C181.437 44.6523 181.053 43.9622 180.844 43.1289C180.649 42.2826 180.552 41.1172 180.552 39.6328V26.1562H177.192V25.3555H180.552V20.043C182.752 20.043 184.673 19.6133 186.313 18.7539V25.3555H191.04ZM205.687 25.3164C206.937 25.3945 208.233 25.4336 209.574 25.4336C210.915 25.4336 211.944 25.3945 212.66 25.3164V26.1172C212.1 26.2604 211.592 26.5924 211.137 27.1133C210.694 27.6341 210.277 28.4479 209.887 29.5547L202.738 49.6719C202.204 51.0651 201.618 52.0156 200.98 52.5234C200.199 53.1875 199.034 53.5195 197.484 53.5195C196.794 53.5195 196.111 53.4023 195.434 53.168C194.77 52.9466 194.216 52.5951 193.773 52.1133C193.344 51.6315 193.129 51.0326 193.129 50.3164C193.129 49.4961 193.422 48.8385 194.008 48.3438C194.594 47.849 195.368 47.6016 196.332 47.6016C197.23 47.6016 197.953 47.8229 198.5 48.2656C199.06 48.7083 199.34 49.3268 199.34 50.1211C199.34 50.668 199.158 51.1758 198.793 51.6445C198.441 52.1263 197.953 52.4844 197.328 52.7188C197.523 52.7448 197.829 52.7578 198.246 52.7578C199.913 52.7578 201.13 51.7031 201.898 49.5938L202.543 47.6797L194.047 28.4023C193.63 27.4779 193.214 26.8724 192.797 26.5859C192.393 26.2995 191.983 26.1562 191.566 26.1562V25.3164C193.324 25.4727 195.154 25.5508 197.055 25.5508C198.63 25.5508 200.486 25.4727 202.621 25.3164V26.1562C202.048 26.1562 201.599 26.1758 201.273 26.2148C200.948 26.2539 200.668 26.3516 200.434 26.5078C200.212 26.6641 200.102 26.918 200.102 27.2695C200.102 27.582 200.193 27.9596 200.375 28.4023L205.277 40.2188L208.012 32.5234C208.441 31.2474 208.656 30.1797 208.656 29.3203C208.656 28.3047 208.396 27.5365 207.875 27.0156C207.354 26.4818 206.625 26.1823 205.687 26.1172V25.3164ZM222.972 28.4805C224.183 26.0065 226.37 24.7695 229.534 24.7695C230.628 24.7695 231.52 24.8997 232.21 25.1602C232.913 25.4206 233.486 25.8047 233.929 26.3125C234.372 26.8203 234.691 27.4779 234.886 28.2852C235.081 29.0924 235.179 30.1732 235.179 31.5273V42.2891C235.179 43.0312 235.264 43.6107 235.433 44.0273C235.602 44.444 235.869 44.737 236.234 44.9062C236.598 45.0755 237.099 45.1602 237.737 45.1602V46C235.081 45.8958 233.323 45.8438 232.464 45.8438C231.644 45.8438 229.905 45.8958 227.249 46V45.1602C227.796 45.1602 228.226 45.0755 228.538 44.9062C228.851 44.737 229.072 44.444 229.202 44.0273C229.346 43.6107 229.417 43.0312 229.417 42.2891V29.8477C229.417 28.7539 229.235 27.9271 228.87 27.3672C228.519 26.8073 227.874 26.5273 226.937 26.5273C226.208 26.5273 225.537 26.7292 224.925 27.1328C224.326 27.5365 223.851 28.0964 223.499 28.8125C223.148 29.5156 222.972 30.2969 222.972 31.1562V42.2891C222.972 43.0312 223.043 43.6107 223.187 44.0273C223.33 44.444 223.558 44.737 223.87 44.9062C224.183 45.0755 224.606 45.1602 225.14 45.1602V46C222.692 45.8958 221.038 45.8438 220.179 45.8438C219.359 45.8438 217.516 45.8958 214.652 46V45.1602C215.29 45.1602 215.791 45.0755 216.155 44.9062C216.533 44.737 216.8 44.444 216.956 44.0273C217.125 43.6107 217.21 43.0312 217.21 42.2891V29.6719C217.21 28.4349 217.021 27.543 216.644 26.9961C216.266 26.4362 215.602 26.1562 214.652 26.1562V25.3164C215.498 25.3945 216.325 25.4336 217.132 25.4336C219.489 25.4336 221.435 25.2513 222.972 24.8867V28.4805ZM246.643 33.6367C246.604 34.0273 246.584 34.6523 246.584 35.5117C246.584 37.2826 246.832 38.7539 247.327 39.9258C247.821 41.0846 248.459 41.9375 249.241 42.4844C250.035 43.0182 250.881 43.2852 251.78 43.2852C253.98 43.2852 255.745 42.2174 257.073 40.082L257.776 40.3164C257.437 41.4102 256.91 42.4323 256.194 43.3828C255.491 44.3203 254.592 45.0885 253.498 45.6875C252.418 46.2734 251.181 46.5664 249.787 46.5664C247.952 46.5664 246.337 46.1758 244.944 45.3945C243.564 44.6133 242.483 43.4284 241.702 41.8398C240.933 40.2383 240.549 38.2526 240.549 35.8828C240.549 33.4609 240.966 31.4232 241.799 29.7695C242.633 28.1029 243.785 26.8529 245.256 26.0195C246.728 25.1862 248.427 24.7695 250.354 24.7695C255.367 24.7695 257.873 27.7253 257.873 33.6367H246.643ZM252.834 32.875C252.873 30.7917 252.659 29.0599 252.19 27.6797C251.734 26.2995 251.037 25.6094 250.1 25.6094C249.149 25.6094 248.355 26.2018 247.717 27.3867C247.092 28.5586 246.708 30.388 246.565 32.875H252.834ZM262.853 38.2852C263.114 40.5898 263.673 42.3932 264.533 43.6953C265.405 44.9974 266.636 45.6484 268.224 45.6484C269.005 45.6484 269.669 45.4141 270.216 44.9453C270.776 44.4635 271.056 43.7474 271.056 42.7969C271.056 42.0547 270.887 41.3906 270.548 40.8047C270.223 40.2188 269.806 39.6979 269.298 39.2422C268.791 38.7865 268.029 38.1615 267.013 37.3672C265.776 36.3646 264.845 35.5768 264.22 35.0039C263.608 34.431 263.081 33.7539 262.638 32.9727C262.196 32.1784 261.974 31.2799 261.974 30.2773C261.974 29.1315 262.287 28.1419 262.912 27.3086C263.537 26.4753 264.377 25.8438 265.431 25.4141C266.486 24.9844 267.632 24.7695 268.869 24.7695C269.884 24.7695 270.815 24.8932 271.662 25.1406C272.508 25.388 273.172 25.6745 273.654 26C273.914 26.1823 274.149 26.2734 274.357 26.2734C274.852 26.2734 275.164 25.7852 275.294 24.8086H276.173C276.069 26.1497 276.017 28.4935 276.017 31.8398H275.138C274.904 30.0951 274.377 28.6302 273.556 27.4453C272.749 26.2474 271.571 25.6484 270.021 25.6484C269.227 25.6484 268.576 25.8763 268.068 26.332C267.56 26.7878 267.306 27.4128 267.306 28.207C267.306 29.1055 267.606 29.8802 268.205 30.5312C268.804 31.1823 269.526 31.8073 270.373 32.4062C271.219 33.0052 271.837 33.4544 272.228 33.7539C273.322 34.5742 274.188 35.2904 274.826 35.9023C275.477 36.5143 276.004 37.2109 276.408 37.9922C276.811 38.7604 277.013 39.6458 277.013 40.6484C277.013 41.8203 276.668 42.8555 275.978 43.7539C275.301 44.6523 274.383 45.349 273.224 45.8438C272.065 46.3255 270.796 46.5664 269.416 46.5664C267.996 46.5664 266.759 46.2865 265.705 45.7266C264.91 45.3229 264.285 45.043 263.83 44.8867C263.752 44.8607 263.686 44.8477 263.634 44.8477C263.205 44.8477 262.892 45.3229 262.697 46.2734H261.818C261.922 44.75 261.974 42.0872 261.974 38.2852H262.853ZM282.13 38.2852C282.39 40.5898 282.95 42.3932 283.809 43.6953C284.682 44.9974 285.912 45.6484 287.501 45.6484C288.282 45.6484 288.946 45.4141 289.493 44.9453C290.053 44.4635 290.333 43.7474 290.333 42.7969C290.333 42.0547 290.164 41.3906 289.825 40.8047C289.499 40.2188 289.083 39.6979 288.575 39.2422C288.067 38.7865 287.305 38.1615 286.29 37.3672C285.053 36.3646 284.122 35.5768 283.497 35.0039C282.885 34.431 282.358 33.7539 281.915 32.9727C281.472 32.1784 281.251 31.2799 281.251 30.2773C281.251 29.1315 281.563 28.1419 282.188 27.3086C282.813 26.4753 283.653 25.8438 284.708 25.4141C285.762 24.9844 286.908 24.7695 288.145 24.7695C289.161 24.7695 290.092 24.8932 290.938 25.1406C291.785 25.388 292.449 25.6745 292.93 26C293.191 26.1823 293.425 26.2734 293.634 26.2734C294.128 26.2734 294.441 25.7852 294.571 24.8086H295.45C295.346 26.1497 295.294 28.4935 295.294 31.8398H294.415C294.18 30.0951 293.653 28.6302 292.833 27.4453C292.025 26.2474 290.847 25.6484 289.298 25.6484C288.503 25.6484 287.852 25.8763 287.344 26.332C286.837 26.7878 286.583 27.4128 286.583 28.207C286.583 29.1055 286.882 29.8802 287.481 30.5312C288.08 31.1823 288.803 31.8073 289.649 32.4062C290.496 33.0052 291.114 33.4544 291.505 33.7539C292.598 34.5742 293.464 35.2904 294.102 35.9023C294.753 36.5143 295.281 37.2109 295.684 37.9922C296.088 38.7604 296.29 39.6458 296.29 40.6484C296.29 41.8203 295.945 42.8555 295.255 43.7539C294.578 44.6523 293.66 45.349 292.501 45.8438C291.342 46.3255 290.072 46.5664 288.692 46.5664C287.273 46.5664 286.036 46.2865 284.981 45.7266C284.187 45.3229 283.562 45.043 283.106 44.8867C283.028 44.8607 282.963 44.8477 282.911 44.8477C282.481 44.8477 282.169 45.3229 281.973 46.2734H281.094C281.199 44.75 281.251 42.0872 281.251 38.2852H282.13Z"
-                fill="white" />
-            </svg>
-          </div>
-
-          <div class="footer__soc-media-block">
-
-            <a href="#" class="footer__soc-media">
-              <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_1_522)">
-                  <path
-                    d="M8.71875 9L9.15625 6.125H6.375V4.25C6.375 3.4375 6.75 2.6875 8 2.6875H9.28125V0.21875C9.28125 0.21875 8.125 0 7.03125 0C4.75 0 3.25 1.40625 3.25 3.90625V6.125H0.6875V9H3.25V16H6.375V9H8.71875Z"
-                    fill="white" />
-                </g>
-                <defs>
-                  <clipPath id="clip0_1_522">
-                    <rect width="10" height="16" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg>
-            </a>
-
-            <a href="#" class="footer__soc-media">
-              <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_1_530)">
-                  <path
-                    d="M14.3438 3.75C14.9688 3.28125 15.5312 2.71875 15.9688 2.0625C15.4062 2.3125 14.75 2.5 14.0938 2.5625C14.7812 2.15625 15.2812 1.53125 15.5312 0.75C14.9062 1.125 14.1875 1.40625 13.4688 1.5625C12.8438 0.90625 12 0.53125 11.0625 0.53125C9.25 0.53125 7.78125 2 7.78125 3.8125C7.78125 4.0625 7.8125 4.3125 7.875 4.5625C5.15625 4.40625 2.71875 3.09375 1.09375 1.125C0.8125 1.59375 0.65625 2.15625 0.65625 2.78125C0.65625 3.90625 1.21875 4.90625 2.125 5.5C1.59375 5.46875 1.0625 5.34375 0.625 5.09375V5.125C0.625 6.71875 1.75 8.03125 3.25 8.34375C3 8.40625 2.6875 8.46875 2.40625 8.46875C2.1875 8.46875 2 8.4375 1.78125 8.40625C2.1875 9.71875 3.40625 10.6562 4.84375 10.6875C3.71875 11.5625 2.3125 12.0938 0.78125 12.0938C0.5 12.0938 0.25 12.0625 0 12.0312C1.4375 12.9688 3.15625 13.5 5.03125 13.5C11.0625 13.5 14.3438 8.53125 14.3438 4.1875C14.3438 4.03125 14.3438 3.90625 14.3438 3.75Z"
-                    fill="white" />
-                </g>
-                <defs>
-                  <clipPath id="clip0_1_530">
-                    <rect width="16" height="14" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg>
-            </a>
-
-            <a href="#" class="footer__soc-media">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_1_526)">
-                  <path
-                    d="M3.125 14V4.65625H0.21875V14H3.125ZM1.65625 3.40625C2.59375 3.40625 3.34375 2.625 3.34375 1.6875C3.34375 0.78125 2.59375 0.03125 1.65625 0.03125C0.75 0.03125 0 0.78125 0 1.6875C0 2.625 0.75 3.40625 1.65625 3.40625ZM13.9688 14H14V8.875C14 6.375 13.4375 4.4375 10.5 4.4375C9.09375 4.4375 8.15625 5.21875 7.75 5.9375H7.71875V4.65625H4.9375V14H7.84375V9.375C7.84375 8.15625 8.0625 7 9.5625 7C11.0625 7 11.0938 8.375 11.0938 9.46875V14H13.9688Z"
-                    fill="white" />
-                </g>
-                <defs>
-                  <clipPath id="clip0_1_526">
-                    <rect width="14" height="14" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg>
-            </a>
-
-            <a href="#" class="footer__soc-media">
-              <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_1_534)">
-                  <path
-                    d="M8.5 4.60742C6.125 4.60742 4.23242 6.53711 4.23242 8.875C4.23242 11.25 6.125 13.1426 8.5 13.1426C10.8379 13.1426 12.7676 11.25 12.7676 8.875C12.7676 6.53711 10.8379 4.60742 8.5 4.60742ZM8.5 11.6582C6.97852 11.6582 5.7168 10.4336 5.7168 8.875C5.7168 7.35352 6.94141 6.12891 8.5 6.12891C10.0215 6.12891 11.2461 7.35352 11.2461 8.875C11.2461 10.4336 10.0215 11.6582 8.5 11.6582ZM13.918 4.45898C13.918 3.90234 13.4727 3.45703 12.916 3.45703C12.3594 3.45703 11.9141 3.90234 11.9141 4.45898C11.9141 5.01562 12.3594 5.46094 12.916 5.46094C13.4727 5.46094 13.918 5.01562 13.918 4.45898ZM16.7383 5.46094C16.6641 4.125 16.3672 2.9375 15.4023 1.97266C14.4375 1.00781 13.25 0.710938 11.9141 0.636719C10.541 0.5625 6.42188 0.5625 5.04883 0.636719C3.71289 0.710938 2.5625 1.00781 1.56055 1.97266C0.595703 2.9375 0.298828 4.125 0.224609 5.46094C0.150391 6.83398 0.150391 10.9531 0.224609 12.3262C0.298828 13.6621 0.595703 14.8125 1.56055 15.8145C2.5625 16.7793 3.71289 17.0762 5.04883 17.1504C6.42188 17.2246 10.541 17.2246 11.9141 17.1504C13.25 17.0762 14.4375 16.7793 15.4023 15.8145C16.3672 14.8125 16.6641 13.6621 16.7383 12.3262C16.8125 10.9531 16.8125 6.83398 16.7383 5.46094ZM14.957 13.7734C14.6973 14.5156 14.1035 15.0723 13.3984 15.3691C12.2852 15.8145 9.6875 15.7031 8.5 15.7031C7.27539 15.7031 4.67773 15.8145 3.60156 15.3691C2.85938 15.0723 2.30273 14.5156 2.00586 13.7734C1.56055 12.6973 1.67188 10.0996 1.67188 8.875C1.67188 7.6875 1.56055 5.08984 2.00586 3.97656C2.30273 3.27148 2.85938 2.71484 3.60156 2.41797C4.67773 1.97266 7.27539 2.08398 8.5 2.08398C9.6875 2.08398 12.2852 1.97266 13.3984 2.41797C14.1035 2.67773 14.6602 3.27148 14.957 3.97656C15.4023 5.08984 15.291 7.6875 15.291 8.875C15.291 10.0996 15.4023 12.6973 14.957 13.7734Z"
-                    fill="white" />
-                </g>
-                <defs>
-                  <clipPath id="clip0_1_534">
-                    <rect width="17" height="18" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <div class="contacts__footer-navs">
-          <div class="explore">
-            <h3 class="navs__title">Explore</h3>
-            <ul class="explore__inner">
-              <li class="explore__item"><a href="#" class="explore__link">Home</a></li>
-              <li class="explore__item"><a href="#" class="explore__link">About Us</a></li>
-              <li class="explore__item"><a href="#" class="explore__link">Services</a></li>
-              <li class="explore__item"><a href="#" class="explore__link">Articles</a></li>
-              <li class="explore__item"><a href="#" class="explore__link">Contact Us</a></li>
-            </ul>
-          </div>
-          <div class="utility__pages">
-            <h3 class="navs__title">Utility Pages</h3>
-            <ul class="utility__pages-list">
-              <li class="utility__pages-item"><a href="#" class="utility__pages-link">Style Guide</a></li>
-              <li class="utility__pages-item"><a href="#" class="utility__pages-link">404 Not Found</a></li>
-              <li class="utility__pages-item"><a href="#" class="utility__pages-link">Password Protected</a></li>
-              <li class="utility__pages-item"><a href="#" class="utility__pages-link">Licenses</a></li>
-              <li class="utility__pages-item"><a href="#" class="utility__pages-link">Changelog</a></li>
-            </ul>
-          </div>
-          <div class="keep-in-touch">
-            <h3 class="navs__title">Keep in Touch</h3>
-            <ul class="keep-in-touch--contacts">
-              <li class="contacts__item">
-                <span class="contacts__item-name">Address :</span>
-                <span class="contacts__item-value">24A Kingston St, Los Vegas <br> NC 28202, USA.</span>
-              </li>
-              <li class="contacts__item">
-                <span class="contacts__item-name">Mail : </span>
-                <a href="mailto: support@doctors.com" class="contacts__item-link">support@doctors.com</a>
-              </li>
-              <li class="contacts__item">
-                <span class="contacts__item-name">Phone : </span>
-                <a class="contacts__phone-link" href="tel: +221234567900">(+22) 123 - 4567 - 900</a>
-              </li>
-            </ul>
-          </div>
-          <div class="working__hours">
-            <h3 class="navs__title">Working Hours</h3>
-            <ul class="working__hours-list">
-              <li class="working__hours-item">Mon to Fri: 7am - 6pm</li>
-              <li class="working__hours-item">Sat: 9am - 7pm</li>
-              <li class="working__hours-item">Sun: 9am - 6pm</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__copyright">
-        <p class="footer__copyright-value">© Drafted by VictorFlow - Powered by Webflow</p>
-      </div>
-    </div>
-  </footer>
-
-
-  <script src="./scripts/app.js"></script>
-</body>
-
+    <script src="./scripts/app.js"></script>
+  </body>
 </html>

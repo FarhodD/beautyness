@@ -5,12 +5,14 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 :root {
   --main-font: 'Manrope', sans-serif;
   --secondary-font: 'Playfair Display', serif; 
 }
 
+svg>path {
+  transition: .4s ease-in-out;
+}
 img {
   max-width: 100%;
   /* object-fit: contain; */

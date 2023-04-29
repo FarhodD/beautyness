@@ -1,30 +1,36 @@
 // burgerMenu
 
-const menuBtn = document.querySelector('.burger__menu'),
-  submenu = document.querySelector('.submenu');
+const menuBtn = document.querySelector(".burger__menu"),
+  submenu = document.querySelector(".submenu");
 
 function toggleMenu() {
-  menuBtn.classList.toggle('active');
-  submenu.classList.toggle('vis__submenu');
+  menuBtn.classList.toggle("active");
+  submenu.classList.toggle("vis__submenu");
 }
-
 
 // modalWindow
 
-const btn = document.querySelector('.header__top--btn');
-const modalOverlay = document.querySelector('.modal-overlay');
-const modal = document.querySelector('.modal');
-const cancelBtn = document.querySelector('.cancel');
-const headerBtn = document.querySelector('.header__btn');
+// const btn = document.querySelector('.header__top--btn');
+const modalOverlay = document.querySelector(".modal-overlay");
+const modals = document.querySelectorAll(".modal");
+const cancelBtn = document.querySelector(".cancel");
+const headerBtn = document.querySelector(".header__btn");
 
-btn.addEventListener('click', e => {
-  let path = e.currentTarget.getAttribute('data-path');
+const modalBtns = document.querySelectorAll(".modalBtn");
 
-  modal.classList.remove('modal--visible');
+modalBtns.forEach((el) => {
+  el.addEventListener("click", (e) => {
+    let path = e.currentTarget.getAttribute("data-path");
 
-  document.querySelector(`[data-target='${path}']`)
-    .classList.add('modal--visible');
-  modalOverlay.classList.add('modal-overlay--visible');
+    modals.forEach((el) => {
+      el.classList.remove("modal--visible");
+    });
+
+    document
+      .querySelector(`[data-target='${path}']`)
+      .classList.add("modal--visible");
+    modalOverlay.classList.add("modal-overlay--visible");
+  });
 });
 
 modalOverlay.addEventListener("click", (e) => {
@@ -32,34 +38,35 @@ modalOverlay.addEventListener("click", (e) => {
 
   if (e.target == modalOverlay) {
     modalOverlay.classList.remove("modal-overlay--visible");
-    modal.classList.remove('modal--visible');
+    modal.classList.remove("modal--visible");
   }
 });
 
 document.addEventListener("keydown", (e) => {
   if (e.code == "Escape") {
     modalOverlay.classList.remove("modal-overlay--visible");
-    modal.classList.remove("modal--visible");
+    modals.forEach((el) => {
+      el.classList.remove("modal--visible");
+    });
   }
 });
 
 cancelBtn.addEventListener("click", () => {
   modalOverlay.classList.remove("modal-overlay--visible");
-  modal.classList.remove("modal--visible");
-})
-
-headerBtn.addEventListener("click", () => {
-  modalOverlay.classList.add('modal-overlay--visible');
-  modal.classList.add("modal--visible");
-})
+  modals.forEach((el) => {
+    el.classList.remove("modal--visible");
+  });
+});
 
 // ourBlog
 
-const blogBtn = document.querySelector('.our__blog-btn');
-const blogCardsEl = document.querySelector('.our__blog-cards');
+const blogBtn = document.querySelector(".our__blog-btn");
+const blogCardsEl = document.querySelector(".our__blog-cards");
 
 blogBtn.addEventListener("click", () => {
-  blogCardsEl.insertAdjacentHTML('afterbegin', `
+  blogCardsEl.insertAdjacentHTML(
+    "afterbegin",
+    `
   <div class="our__blog-card">
   <img src="./images/card-img1.jpg" alt="">
   <div class="our__blog-card-about">
@@ -101,6 +108,6 @@ blogBtn.addEventListener("click", () => {
       skin therapy.</p>
   </div>
 </div>
-  `)
-
-})
+  `
+  );
+});
