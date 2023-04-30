@@ -53,15 +53,14 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-cancelBtn.forEach(canc => {
+cancelBtn.forEach((canc) => {
   canc.addEventListener("click", () => {
     modalOverlay.classList.remove("modal-overlay--visible");
     modals.forEach((el) => {
       el.classList.remove("modal--visible");
     });
   });
-})
-
+});
 
 // ourBlog
 
@@ -70,9 +69,9 @@ const blogCardsEl = document.querySelector(".our__blog-cards");
 
 blogBtn.addEventListener("click", () => {
   blogCardsEl.insertAdjacentHTML(
-    "afterbegin",
+    "beforeend",
     `
-  <div class="our__blog-card">
+  <div class="our__blog-card scale-up-center">
   <img src="./images/card-img1.jpg" alt="">
   <div class="our__blog-card-about">
     <div class="our__blog-card-title">
@@ -80,13 +79,13 @@ blogBtn.addEventListener("click", () => {
       <div class="card__title-defice"></div>
       <p class="card__title-name">Peter Bergson</p>
     </div>
-    <h3 class="card-name">How to make the make-up stay last</h3>
+    <h3 class="card-name">How to make the make-up stay last 134223</h3>
     <p class="card-text">Therapeutic aromatherapy can help bring balance both mentally, physically, and
       different blends.</p>
   </div>
 </div>
 
-<div class="our__blog-card">
+<div class="our__blog-card scale-up-center">
   <img src="./images/card-img2.jpg" alt="">
   <div class="our__blog-card-about">
     <div class="our__blog-card-title">
@@ -94,13 +93,13 @@ blogBtn.addEventListener("click", () => {
       <div class="card__title-defice"></div>
       <p class="card__title-name">John Walker</p>
     </div>
-    <h3 class="card-name">Tips to improve your body via cleansing</h3>
+    <h3 class="card-name">Tips to improve your body via cleansing 43434</h3>
     <p class="card-text">Whether you’re looking to stress, boost energy, improve sleep, clear sinuses, or
       relieve a headache.</p>
   </div>
 </div>
 
-<div class="our__blog-card">
+<div class="our__blog-card scale-up-center">
   <img src="./images/card-img3.jpg" alt="">
   <div class="our__blog-card-about">
     <div class="our__blog-card-title">
@@ -115,4 +114,5 @@ blogBtn.addEventListener("click", () => {
 </div>
   `
   );
+  blogBtn.style.display = "none";
 });
