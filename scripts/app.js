@@ -13,7 +13,7 @@ function toggleMenu() {
 // const btn = document.querySelector('.header__top--btn');
 const modalOverlay = document.querySelector(".modal-overlay");
 const modals = document.querySelectorAll(".modal");
-const cancelBtn = document.querySelector(".cancel");
+const cancelBtn = document.querySelectorAll(".cancel");
 const headerBtn = document.querySelector(".header__btn");
 
 const modalBtns = document.querySelectorAll(".modalBtn");
@@ -38,7 +38,9 @@ modalOverlay.addEventListener("click", (e) => {
 
   if (e.target == modalOverlay) {
     modalOverlay.classList.remove("modal-overlay--visible");
-    modal.classList.remove("modal--visible");
+    modals.forEach((el) => {
+      el.classList.remove("modal--visible");
+    });
   }
 });
 
@@ -51,12 +53,15 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-cancelBtn.addEventListener("click", () => {
-  modalOverlay.classList.remove("modal-overlay--visible");
-  modals.forEach((el) => {
-    el.classList.remove("modal--visible");
+cancelBtn.forEach(canc => {
+  canc.addEventListener("click", () => {
+    modalOverlay.classList.remove("modal-overlay--visible");
+    modals.forEach((el) => {
+      el.classList.remove("modal--visible");
+    });
   });
-});
+})
+
 
 // ourBlog
 
