@@ -72,7 +72,7 @@ blogBtn.addEventListener("click", () => {
     "beforeend",
     `
   <div class="our__blog-card scale-up-center">
-  <img src="./images/card-img1.jpg" alt="">
+  <img src="./images/1.webp" alt="">
   <div class="our__blog-card-about">
     <div class="our__blog-card-title">
       <p class="card__title-date">September 30, 2021</p>
@@ -86,7 +86,7 @@ blogBtn.addEventListener("click", () => {
 </div>
 
 <div class="our__blog-card scale-up-center">
-  <img src="./images/card-img2.jpg" alt="">
+  <img src="./images/2.webp" alt="">
   <div class="our__blog-card-about">
     <div class="our__blog-card-title">
       <p class="card__title-date">September 30, 2021</p>
@@ -100,7 +100,7 @@ blogBtn.addEventListener("click", () => {
 </div>
 
 <div class="our__blog-card scale-up-center">
-  <img src="./images/card-img3.jpg" alt="">
+  <img src="./images/3.webp" alt="">
   <div class="our__blog-card-about">
     <div class="our__blog-card-title">
       <p class="card__title-date">September 30, 2021</p>
@@ -116,3 +116,13 @@ blogBtn.addEventListener("click", () => {
   );
   blogBtn.style.display = "none";
 });
+
+
+// const footerIco = document.querySelectorAll(".footer__ico");
+// const footerSocMed = document.querySelectorAll('.footer__soc-media');
+
+// footerSocMed.forEach(socMed => {
+//   socMed.addEventListener("mouseover", () => {
+//     socMed.style.backgroundColor = "#fff";
+//   })
+// })

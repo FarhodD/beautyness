@@ -341,11 +341,12 @@
 
   .dicount__inp {
     font-size: 17px;
-    padding: 10px 7px;
+    padding: 10px 7px 10px 40px;
   }
 
   textarea {
     font-size: 17px;
+    padding: 10px 20px 18px 40px;
   }
 
   .discount__right {
@@ -370,6 +371,18 @@
     height: 55px;
   }
 
+  .prof,
+  .message,
+  .tel__ico,
+  .book__ico,
+  .comments__ico {
+    width: 30px;
+    top: 0px;
+  }
+
+  .inp__container>svg {
+    top: 0;
+  }
 
 
 }

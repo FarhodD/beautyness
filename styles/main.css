@@ -871,6 +871,17 @@ textarea {
   justify-content: center;
   align-items: center;
   border: 2px solid #5c8692;
+  transition: .5s;
+}
+
+.footer__soc-media:hover  {
+  background: #fff;
+  border: none;
+  border: 2px solid #fff;
+}
+
+.footer__soc-media:hover > .footer__ico path {
+  fill: #5c8692;
 }
 
 .contacts__footer-navs {
@@ -906,6 +917,11 @@ textarea {
   line-height: 29px;
   letter-spacing: 0.17px;
   color: #ffffff;
+  transition: .5s;
+}
+
+.explore__link:hover {
+  color: #5c8692;
 }
 
 .utility__pages {}
@@ -923,6 +939,11 @@ textarea {
   line-height: 29px;
   letter-spacing: 0.17px;
   color: #ffffff;
+  transition: .5s;
+}
+
+.utility__pages-link:hover {
+  color: #5c8692;
 }
 
 .keep-in-touch {
@@ -961,9 +982,20 @@ span.contacts__item-name {
 
 .contacts__item-value {}
 
-.contacts__item-link {}
+.contacts__item-link {
+  transition: .5s;
+}
 
-.contacts__phone-link {}
+.contacts__item-link:hover {
+  color: #5c8692;
+}
+
+.contacts__phone-link {
+  transition: .5s;
+}
+.contacts__phone-link:hover {
+  color: #5c8692;
+}
 
 .working__hours {}
 
@@ -1125,5 +1157,20 @@ span.contacts__item-name {
   font-size: 20px;
   font-weight: 600;
   color: #5c8692;
+}
 
+/* THANKS */
+.thanks {
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.thanks__title {
+  font-size: 50px;
+  color: #5C8692;
+}
+
+.thanks__logo svg {
+  fill: #5C8692;
 }
